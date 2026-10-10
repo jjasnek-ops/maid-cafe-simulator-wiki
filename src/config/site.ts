@@ -69,7 +69,7 @@ export const site: SiteConfig = {
   name: 'Maid Cafe Simulator Wiki',
   shortName: 'MCS Wiki',
   description: 'An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting.',
-  domain: 'maid-cafe-simulator-wiki.pages.dev',
+  domain: 'maidcafesimulatorguide.wiki',
   tagline: 'Make every shift count.',
   legalNotice: 'Independent fan guide for Steam App 3232690. Not affiliated with Accelix, SCON or Valve. Game names and trademarks belong to their owners.',
   // Set a real address if you run no social channels — the contact page

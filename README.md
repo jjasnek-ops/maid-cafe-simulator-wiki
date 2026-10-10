@@ -2,7 +2,7 @@
 
 Independent English guides for **Steam App 3232690**, built with [AnvilWiki](https://github.com/PNGTRID/AnvilWiki). This project is not affiliated with Accelix, SCON or Valve.
 
-- Site: https://maid-cafe-simulator-wiki.pages.dev/
+- Site: https://maidcafesimulatorguide.wiki/
 - Source: https://github.com/jjasnek-ops/maid-cafe-simulator-wiki
 - Official game: https://store.steampowered.com/app/3232690/Maid_Cafe_Simulator/
 
@@ -34,7 +34,7 @@ CF_PAGES_COMMIT_SHA="$(git rev-parse HEAD)" pnpm build
 npm exec --yes --package=wrangler@4.149.0 -- wrangler pages deploy dist --project-name maid-cafe-simulator-wiki --branch main
 ```
 
-The production origin is the actual Pages hostname. If a custom domain is connected later, update the site configuration and `SITE_URL`, rebuild, verify canonical/sitemap/redirect behavior, and submit the new sitemap. Keep the Google ownership verification file in `public/`.
+The production origin is `https://maidcafesimulatorguide.wiki`. The apex and `www` hostnames are attached to this Pages project; DNS delegation, certificates and host redirects must also be active before the domain migration is complete. Canonical, Open Graph, robots and sitemap URLs are generated from this origin. Keep the Google ownership verification file in `public/`.
 
 ## Tests and maintenance
 
