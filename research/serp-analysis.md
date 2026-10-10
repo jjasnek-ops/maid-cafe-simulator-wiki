@@ -19,6 +19,10 @@
 
 首页9项常规结果（未补足十项，竞争分 null）：2024年的其他咖啡游戏 Steam 配方指南及日文副页；maidcafesimulatorwiki.wiki；Steam3232690；Pinterest；Yandere Wiki；Maid Cafe Coop itch.io；Vacation Cafe Simulator YouTube；Jestr聚合页。大量意图混淆，绝不能把 Espresso+Milk 等其他游戏配方引入本站。
 
+## maid cafe simulator achievements
+
+已实查第一页9项常规结果，并打开 start=10 的第二页。第一页包括 Exophase 的正确 App3232690、Steam 的错误同名 App423640、SteamHunters Demo4416560、maidcafesimulatorwiki.wiki、MobyGames、正确 Steam 成就页，以及 Electric Street 的 SteamDB/PlayTracker/Steam指南（App1789030，排除）。第二页首项为 maid-cafe-simulator.wiki。未将分页偏移10的首项伪称第10名；竞争分继续为 null。只保存标题和链接，不保存登录账户的个人数据。
+
 ## 其余词
 
 Google 前十未验证，不提供0–5分。Web工具检索发现 Steam、SteamVault、SteamDB、games-manuals、Reddit官方开发记录和旧版资料，逐一做平台/版本甄别。

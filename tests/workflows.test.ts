@@ -568,7 +568,7 @@ describe('setup.yml python [vars] rewrite is value-aware (executes the real here
     // Pinned against the REAL shipping header (authors.ts precedent): if the
     // wrangler.toml anchors drift, this goes red instead of the workflow
     // silently leaving a block that lies about the file still being demo.
-    const real = readFileSync(join(root, 'wrangler.toml'), 'utf8');
+    const real = readFileSync(join(root, 'tests/fixtures/anvilwiki/wrangler.toml'), 'utf8');
     const header = real.slice(0, real.indexOf('END FORKER WARNING') + 'END FORKER WARNING'.length);
     expect(header).toContain('FORKERS READ THIS FIRST');
     const { out } = runVarsRewrite(`${header}\n\n${demoVars}`);
