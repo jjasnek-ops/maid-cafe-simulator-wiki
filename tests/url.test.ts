@@ -17,12 +17,15 @@ describe('url helpers', () => {
     });
 
     it('prepends the locale prefix for non-default locales', () => {
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(localizePath('/bosses', 'ja')).toBe('/ja/bosses/');
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(localizePath('/bosses/emberfang', 'ja')).toBe('/ja/bosses/emberfang/');
     });
 
     it('ensures leading slash on input without one', () => {
       expect(localizePath('about', 'en')).toBe('/about/');
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(localizePath('about', 'ja')).toBe('/ja/about/');
     });
   });
@@ -32,6 +35,7 @@ describe('url helpers', () => {
       expect(homeUrl('en')).toBe('/');
     });
     it('returns /ja for non-default locale', () => {
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(homeUrl('ja')).toBe('/ja/');
     });
   });
@@ -39,6 +43,7 @@ describe('url helpers', () => {
   describe('listPath', () => {
     it('builds the correct list URL for each locale', () => {
       expect(listPath('bosses', 'en')).toBe('/bosses/');
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(listPath('bosses', 'ja')).toBe('/ja/bosses/');
       expect(listPath('codes', 'en')).toBe('/codes/');
     });
@@ -47,6 +52,7 @@ describe('url helpers', () => {
   describe('detailPath', () => {
     it('builds the correct article URL for each locale', () => {
       expect(detailPath('bosses', 'emberfang', 'en')).toBe('/bosses/emberfang/');
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(detailPath('bosses', 'emberfang', 'ja')).toBe('/ja/bosses/emberfang/');
     });
 
@@ -54,6 +60,7 @@ describe('url helpers', () => {
       expect(detailPath('guides', 'early-game/beginner', 'en')).toBe(
         '/guides/early-game/beginner/',
       );
+      // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
       expect(detailPath('guides', 'early-game/beginner', 'ja')).toBe(
         '/ja/guides/early-game/beginner/',
       );
@@ -103,13 +110,16 @@ describe('slugifyTag (ASCII slug / raw fallback for non-ASCII)', () => {
 describe('absoluteUrl', () => {
   it('prefixes siteUrl and applies the locale prefix rules', () => {
     expect(absoluteUrl('/bosses', 'en')).toMatch(/^https:\/\/[^/]+\/bosses\/$/);
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(absoluteUrl('/bosses', 'ja')).toMatch(/^https:\/\/[^/]+\/ja\/bosses\/$/);
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(absoluteUrl('/', 'ja')).toMatch(/^https:\/\/[^/]+\/ja\/$/);
   });
 });
 
 describe('languageAlternates', () => {
   it('builds absolute hreflang entries for exactly the given locales', () => {
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     const alts = languageAlternates((loc) => detailPath('bosses', 'x', loc), ['en', 'ja']);
     expect(alts).toHaveLength(2);
     expect(alts[0]).toEqual({ hreflang: 'en', href: expect.stringMatching(/\/bosses\/x\/$/) });
@@ -117,11 +127,13 @@ describe('languageAlternates', () => {
   });
 
   it('never emits x-default (BaseLayout derives it separately)', () => {
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     const alts = languageAlternates((loc) => listPath('guides', loc), ['en', 'ja']);
     expect(alts.some((a) => a.hreflang === 'x-default')).toBe(false);
   });
 
   it('honors a reduced locale list (single-language article)', () => {
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     const alts = languageAlternates((loc) => detailPath('bosses', 'x', loc), ['ja']);
     expect(alts).toHaveLength(1);
     expect(alts[0].hreflang).toBe('ja');
@@ -132,7 +144,9 @@ describe('languageAlternates', () => {
     // returns localizePath output) while absoluteUrl localizes internally;
     // both must join the domain through the same single helper so the
     // `${siteUrl}${path}` construction can't drift between them.
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     const alts = languageAlternates((loc) => localizePath('/faq', loc), ['en', 'ja']);
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(alts.map((a) => a.href)).toEqual([absoluteUrl('/faq', 'en'), absoluteUrl('/faq', 'ja')]);
   });
 });

@@ -60,6 +60,7 @@ import {
 } from '../scripts/lib/apply-template-i18n';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
+const demoRoot = join(repoRoot, 'tests/fixtures/anvilwiki');
 
 function makeInput(overrides: Partial<SkinInput> = {}): SkinInput {
   return {
@@ -256,7 +257,7 @@ describe('rewriteWranglerVars is value-aware (a re-run must not wipe the user en
     // demo value, a re-run would PRESERVE it into every fork — the exact leak
     // this list exists to prevent. Every uncommented [vars] value must either
     // be listed here or be empty.
-    const toml = readFileSync(join(repoRoot, 'wrangler.toml'), 'utf8');
+    const toml = readFileSync(join(demoRoot, 'wrangler.toml'), 'utf8');
     const section = toml.match(/(?:^|\n)\[vars\]\r?\n([\s\S]*?)(?=\r?\n\[|$)/)?.[1] ?? '';
     const values = [...section.matchAll(/^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*"(.*)"\s*$/gm)].map(
       (m) => m[2],
@@ -380,7 +381,7 @@ describe('rewriteLocaleJson clones the default locale for brand-new files (fresh
   // the demo identity into the new locale. Without the clone the fresh file
   // shipped a ~76-key-shorter skeleton (no $schema/search/shared) and the
   // fork's first `check-i18n --strict-ui` run went red.
-  const demoEn = readFileSync(join(repoRoot, 'src/locales/en.json'), 'utf8');
+  const demoEn = readFileSync(join(demoRoot, 'src/locales/en.json'), 'utf8');
   const enOut = rewriteLocaleJson(makeInput(), 'en', 2026, demoEn);
   const freshRaw = rewriteLocaleJson(makeInput(), 'zh', 2026, undefined, enOut);
   const fresh = JSON.parse(freshRaw);
@@ -621,7 +622,7 @@ describe('demo asset inventories stay in sync with setup.yml (drift has shipped 
     // demo key without updating the registry would silently keep demo
     // residue in forks (isDemoPublicFileContent defaults to keep).
     for (const [rel, marker] of Object.entries(DEMO_ADSTERRA_UNIT_MARKERS)) {
-      const source = readFileSync(join(repoRoot, 'public', rel), 'utf8');
+      const source = readFileSync(join(demoRoot, 'public', rel), 'utf8');
       expect(source, rel).toContain(marker);
     }
   });
@@ -799,13 +800,13 @@ describe('hyphen locales (zh-tw / pt-br) generate legal TypeScript', () => {
 describe('demo locale deletion is content-aware (rebranded locales must survive re-runs)', () => {
   test('the shipped demo locale files still carry the site.name marker (marker drift guard)', () => {
     for (const locale of ['en', 'ja']) {
-      const raw = readFileSync(join(repoRoot, 'src/locales', `${locale}.json`), 'utf8');
+      const raw = readFileSync(join(demoRoot, 'src/locales', `${locale}.json`), 'utf8');
       expect(isDemoLocaleContent(raw)).toBe(true);
     }
   });
 
   test('a rewritten demo-named locale is no longer demo content', () => {
-    const demoEn = readFileSync(join(repoRoot, 'src/locales/en.json'), 'utf8');
+    const demoEn = readFileSync(join(demoRoot, 'src/locales/en.json'), 'utf8');
     const rebranded = rewriteLocaleJson(makeInput(), 'ja', 2026, demoEn);
     expect(isDemoLocaleContent(rebranded)).toBe(false);
   });
@@ -829,7 +830,7 @@ describe('demo article clearing is content-aware (re-runs must keep user work)',
     // article that never mentions the demo game, content-aware clearing would
     // KEEP it forever — this goes red in the template repo until the article
     // carries the marker. Vacuous in forks after a first-run clear.
-    const base = join(repoRoot, 'src/content/wiki');
+    const base = join(demoRoot, 'src/content/wiki');
     const walk = (dir: string): string[] =>
       existsSync(dir)
         ? readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
@@ -901,7 +902,7 @@ describe('setup.yml demo-author removal still matches the real authors.ts', () =
     // either, `\s` spans newlines in both, lazy `.*?` behaves identically.
     // re.sub replaces ALL occurrences → the `g` flag.
     const demoAuthorRe = new RegExp(pyPattern, 'g');
-    const src = readFileSync(join(repoRoot, 'src/config/authors.ts'), 'utf8');
+    const src = readFileSync(join(demoRoot, 'src/config/authors.ts'), 'utf8');
     const after = src.replace(demoAuthorRe, '\n');
     // The demo identity is gone — comment line AND entry line.
     expect(after).not.toContain('Forge Master Kael');
@@ -1031,7 +1032,7 @@ describe('re-run identity detection (S12: re-run = confirm current, never demo d
   });
 
   test('the shipped demo site.ts parses as the demo identity (drift guard)', () => {
-    const raw = readFileSync(join(repoRoot, 'src/config/site.ts'), 'utf8');
+    const raw = readFileSync(join(demoRoot, 'src/config/site.ts'), 'utf8');
     const id = parseSiteTsIdentity(raw);
     expect(id).not.toBeNull();
     expect(isDemoSiteTsIdentity(id!)).toBe(true);
@@ -1186,7 +1187,7 @@ describe('rewriteSiteTs is value-aware on the optional hand-fill fields', () => 
   });
 
   test('demo placeholder values are wiped on a first run (shipped-file drift guard)', () => {
-    const demoSrc = readFileSync(join(repoRoot, 'src/config/site.ts'), 'utf8');
+    const demoSrc = readFileSync(join(demoRoot, 'src/config/site.ts'), 'utf8');
     const out = rewriteSiteTs(demoSrc, makeInput())!;
     for (const demo of DEMO_SITE_OPTIONAL_VALUES) {
       expect(out, demo).not.toContain(demo);
@@ -1348,7 +1349,7 @@ describe('rewriteLocaleJson overview/home are re-run-aware (M2)', () => {
 
 describe('stripDemoAuthors — the CLI authors.ts regex (real-file contract + setup.yml parity)', () => {
   test('removes exactly the demo block from the shipped authors.ts, byte-preserving the rest', () => {
-    const src = readFileSync(join(repoRoot, 'src/config/authors.ts'), 'utf8');
+    const src = readFileSync(join(demoRoot, 'src/config/authors.ts'), 'utf8');
     const once = stripDemoAuthors(src);
     expect(once.changed).toBe(true);
     expect(once.cleaned).not.toContain('Forge Master Kael');
@@ -1372,7 +1373,7 @@ describe('stripDemoAuthors — the CLI authors.ts regex (real-file contract + se
     const yml = readFileSync(join(repoRoot, '.github/workflows/setup.yml'), 'utf8');
     const literal = yml.match(/re\.sub\(r"((?:[^"\\]|\\.)*)", '\\n', s\)/);
     expect(literal, 'setup.yml demo-author re.sub literal not found — step rewritten?').toBeTruthy();
-    const src = readFileSync(join(repoRoot, 'src/config/authors.ts'), 'utf8');
+    const src = readFileSync(join(demoRoot, 'src/config/authors.ts'), 'utf8');
     // Python↔JS semantics for THIS pattern are 1:1 (same argument as the
     // setup.yml contract test above); re.sub is global.
     const afterPy = src.replace(new RegExp(literal![1], 'g'), '\n');

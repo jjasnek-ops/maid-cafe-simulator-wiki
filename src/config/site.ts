@@ -24,6 +24,10 @@ export interface SiteConfig {
    * if you run no social channels, set this.
    */
   contactEmail?: string;
+  /** Optional public issue tracker for this wiki, separate from game support. */
+  contributionsUrl?: string;
+  /** Lucide brand icon used in header and footer. */
+  logoIcon?: string;
   social: {
     /** Official game website URL (the game itself, not the wiki). */
     official: string;
@@ -62,37 +66,30 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: 'Anvil Quest Wiki',
-  shortName: 'AQ Wiki',
-  description:
-    'Complete Anvil Quest wiki with boss guides, tier lists, codes, item locations, and beginner tips. Every guide carries a last-verified date.',
-  domain: 'anvil.wiki',
-  tagline: 'Your forge for everything Anvil Quest',
-  legalNotice:
-    'Anvil Quest Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer.',
-  // 👉 APPLY TEMPLATE: set a real address if you run no social channels —
-  // the contact page renders it as a mailto link.
+  name: 'Maid Cafe Simulator Wiki',
+  shortName: 'MCS Wiki',
+  description: 'An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting.',
+  domain: 'maid-cafe-simulator-wiki.pages.dev',
+  tagline: 'Make every shift count.',
+  legalNotice: 'Independent fan guide for Steam App 3232690. Not affiliated with Accelix, SCON or Valve. Game names and trademarks belong to their owners.',
+  // Set a real address if you run no social channels — the contact page
+  // renders it as a mailto link.
   contactEmail: '',
+  contributionsUrl: 'https://github.com/jjasnek-ops/maid-cafe-simulator-wiki/issues',
+  logoIcon: 'lucide:coffee',
   social: {
-    official: 'https://example.com/anvil-quest',
-    discord: 'https://discord.gg/example',
-    youtube: 'https://youtube.com/@example',
-    twitter: 'https://twitter.com/example',
-    reddit: 'https://reddit.com/r/anvilquest',
+    official: 'https://store.steampowered.com/app/3232690/Maid_Cafe_Simulator/',
+    discord: 'https://discord.gg/dv2xNkvrpD',
   },
-  // 👉 APPLY TEMPLATE: point these at the game's real canonical pages.
-  sameAs: [
-    'https://example.com/anvil-quest',
-    'https://en.wikipedia.org/wiki/Anvil_Quest',
-  ],
   game: {
-    name: 'Anvil Quest',
-    platform: 'Roblox',
-    developer: 'Forge Studios',
-    genre: 'Fantasy RPG',
-    releaseDate: '2026-01-15',
+    name: 'Maid Cafe Simulator',
+    platform: 'Steam',
+    developer: 'Accelix, SCON',
+    genre: 'Cafe management simulation',
+    releaseDate: '2026-10-08',
   },
-  // hero.webp is 1200×630 (the recommended OG share aspect ratio).
+  // og:image dims of the SHIPPED hero.webp — if you replace public/images/hero.webp,
+  // update these in src/config/site.ts to match (wrong dims mis-crop share cards).
   ogImageWidth: 1200,
   ogImageHeight: 630,
 };

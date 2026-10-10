@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 580" role="img" aria-label="Original pastel cafe illustration">
+<defs><pattern id="tiles" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M0 0H38V38H0Z" fill="#e7f1e9" stroke="#fffaf3" stroke-width="3"/></pattern><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#d5eae1"/><stop offset="1" stop-color="#f8fbef"/></linearGradient></defs>
+<ellipse cx="341" cy="509" rx="272" ry="35" fill="#d8caca" opacity=".28"/>
+<rect x="101" y="95" width="453" height="387" rx="78" fill="#f2d7db"/>
+<rect x="122" y="124" width="411" height="349" rx="50" fill="#fffcf5"/>
+<rect x="150" y="160" width="348" height="187" rx="8" fill="url(#glass)" stroke="#293a44" stroke-width="8"/>
+<path d="M267 160V347M383 160V347M150 254H498" stroke="#293a44" stroke-width="6"/>
+<path d="M165 178L207 220M404 176L446 218" stroke="white" stroke-width="12" opacity=".65"/>
+<path d="M140 117H509L531 178H120Z" fill="#d45b8b"/>
+<path d="M162 117H205L191 178H139ZM248 117H291L286 178H235ZM334 117H377L382 178H331ZM420 117H463L479 178H427Z" fill="#fff1e8"/>
+<path d="M120 178H531V190Q506 216 488 190Q469 214 451 190Q432 214 413 190Q394 214 375 190Q356 214 337 190Q318 214 299 190Q280 214 261 190Q242 214 223 190Q204 214 185 190Q166 214 147 190Q131 211 120 190Z" fill="#d45b8b"/>
+<rect x="247" y="86" width="156" height="52" rx="26" fill="#293a44"/>
+<text x="325" y="120" font-family="sans-serif" font-size="23" font-weight="700" fill="#fff8ef" text-anchor="middle" letter-spacing="4">CAFE</text>
+<rect x="114" y="353" width="423" height="132" rx="12" fill="url(#tiles)" stroke="#293a44" stroke-width="6"/>
+<rect x="98" y="342" width="456" height="22" rx="10" fill="#293a44"/>
+<path d="M243 279H330V328Q285 351 243 328Z" fill="#fff9ed" stroke="#293a44" stroke-width="5"/>
+<path d="M329 283C367 280 365 321 330 317" fill="none" stroke="#293a44" stroke-width="6"/>
+<ellipse cx="286" cy="280" rx="42" ry="8" fill="#99715c"/>
+<path d="M275 256C257 236 292 228 275 211M300 258C282 238 317 230 300 213" fill="none" stroke="#d18f96" stroke-width="5" stroke-linecap="round"/>
+<rect x="385" y="288" width="104" height="54" rx="8" fill="#d45b8b" stroke="#293a44" stroke-width="5"/>
+<rect x="399" y="298" width="63" height="20" rx="3" fill="#fff9ed"/>
+<circle cx="479" cy="327" r="4" fill="#fff9ed"/>
+<path d="M188 335V269M183 300C157 300 154 278 167 269C185 267 187 286 188 303M193 295C217 289 225 267 211 260C195 261 194 280 192 300" fill="#83ac96" stroke="#293a44" stroke-width="3"/>
+<path d="M163 316H213L205 342H170Z" fill="#efd0bf" stroke="#293a44" stroke-width="4"/>
+<rect x="147" y="425" width="133" height="98" rx="11" transform="rotate(-8 147 425)" fill="#fff9ed" stroke="#293a44" stroke-width="5"/>
+<path d="M173 447H239M173 465H215M173 483H228" stroke="#bd7990" stroke-width="5" stroke-linecap="round"/>
+<circle cx="506" cy="433" r="55" fill="#f8e4ab" stroke="#293a44" stroke-width="5"/>
+<path d="M506 400L515 419L536 422L521 437L525 459L506 449L487 459L491 437L476 422L498 419Z" fill="#d45b8b"/>
+<path d="M66 237L73 258L95 265L73 272L66 293L59 272L37 265L59 258ZM577 65L585 89L609 97L585 105L577 129L569 105L545 97L569 89Z" fill="#d45b8b"/>
+<circle cx="574" cy="336" r="8" fill="#83ac96"/><circle cx="82" cy="390" r="6" fill="#83ac96"/>
+</svg>

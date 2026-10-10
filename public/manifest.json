@@ -1,11 +1,11 @@
 {
-  "name": "Anvil Quest Wiki",
-  "short_name": "AQ Wiki",
-  "description": "Complete Anvil Quest wiki with boss guides, codes, and tier lists.",
+  "name": "Maid Cafe Simulator Wiki",
+  "short_name": "MCS Wiki",
+  "description": "An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#f36716",
+  "theme_color": "#cb4d84",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -1,246 +1,63 @@
 ---
-/**
- * LegalContent — the shared body for each legal page.
- * Renders different content based on the `page` prop. English only (per PRD).
- */
+/** Generic disclosures; game identity remains in site config. */
 import { site } from '~/config/site';
-
-interface Props {
-  page: 'about' | 'privacy-policy' | 'terms-of-service' | 'copyright' | 'contact';
-}
+interface Props { page: 'about' | 'privacy-policy' | 'terms-of-service' | 'copyright' | 'contact'; }
 const { page } = Astro.props;
-const game = site.game.name;
 const year = new Date().getFullYear();
+const analyticsEnabled = !!(import.meta.env.PUBLIC_GA_ID || import.meta.env.PUBLIC_CF_BEACON_TOKEN);
+const adsEnabled = !!import.meta.env.PUBLIC_ADSENSE_CLIENT || Object.entries(import.meta.env).some(
+  ([key, value]) => key.startsWith('PUBLIC_ADSTERRA_SLOT_') && !!value,
+);
 ---
-
-{
-  page === 'about' && (
-    <>
-      <p>
-        {site.name} is a fan-made community wiki dedicated to {game}, a {site.game.genre} on{' '}
-        {site.game.platform} developed by {site.game.developer}. Our mission is to provide accurate,
-        up-to-date guides, tips, and reference material to help players get the most out of the
-        game.
-      </p>
-      <h2>What We Cover</h2>
-      <ul>
-        <li>Boss strategies and attack patterns</li>
-        <li>Item locations, stats, and crafting recipes</li>
-        <li>Active redeemable codes (updated daily)</li>
-        <li>Tier lists and build recommendations</li>
-        <li>Progression guides for new and returning players</li>
-      </ul>
-      <h2>Community-Driven</h2>
-      <p>
-        This wiki is maintained by volunteers. If you spot an error or have content to contribute,
-        join our Discord and let us know. All content is freely accessible — no account required.
-      </p>
-      <h2>Contact</h2>
-      <p>
-        Reach us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
-        </a>{' '}
-        or{' '}
-        <a href={site.social.official} target="_blank" rel="noopener noreferrer">
-          the game's official channels
-        </a>
-        .
-      </p>
-    </>
-  )
-}
-
-{
-  page === 'privacy-policy' && (
-    <>
-      <p>
-        This privacy policy describes how {site.name} ("we", "us", or "our") handles information
-        when you visit this website.
-      </p>
-      <h2>Information We Collect</h2>
-      <p>
-        {site.name} is a static website. We do not require you to create an account or submit
-        personal information. We do not directly collect or store personal data.
-      </p>
-      <h2>Third-Party Services</h2>
-      <p>
-        We use third-party services that may collect information as described in their respective
-        privacy policies:
-      </p>
-      <ul>
-        <li>
-          <strong>Advertising partners</strong> (e.g. Google AdSense, Adsterra) — may use cookies to
-          serve relevant ads. You can opt out of personalized advertising via your browser settings.
-        </li>
-        <li>
-          <strong>Analytics</strong> (e.g. Google Analytics, Cloudflare Web Analytics) — GA may
-          collect anonymized usage data such as page views and approximate location (cookie-based,
-          loaded only after you accept the consent banner); Cloudflare Web Analytics is cookieless
-          and collects aggregate page-view data.
-        </li>
-        <li>
-          <strong>Cloudflare</strong> — our hosting provider, which may process basic request data
-          for security and performance (and serve Web Analytics when enabled, see above).
-        </li>
-        <li>
-          <strong>Comments</strong> (giscus, opt-in) — when the comment section is enabled,
-          giscus.app loads an embedded GitHub view; viewing it exposes your IP address and browser
-          info to that service, and signing in to comment is handled by GitHub under its own
-          privacy policy.
-        </li>
-        <li>
-          <strong>Embedded videos</strong> (YouTube) — pages with videos load thumbnail images
-          from i.ytimg.com and, after you press play, the YouTube player from youtube-nocookie.com.
-          Until you interact, no YouTube cookies are set.
-        </li>
-      </ul>
-      <h2>Cookies</h2>
-      <p>
-        Some third-party services set cookies. You can control cookies through your browser
-        settings. Disabling cookies may affect ad personalization but will not prevent you from
-        accessing site content.
-      </p>
-      <h2>Children's Privacy</h2>
-      <p>
-        {site.name} is not directed at children under 13, and we do not knowingly collect
-        information from children.
-      </p>
-      <h2>Changes to This Policy</h2>
-      <p>We may update this policy from time to time. Changes will be posted on this page.</p>
-    </>
-  )
-}
-
-{
-  page === 'terms-of-service' && (
-    <>
-      <p>By accessing {site.name}, you agree to the following terms of service.</p>
-      <h2>Use of Content</h2>
-      <p>
-        All guides, articles, and reference material on this site are provided for personal,
-        non-commercial use. You may not copy, republish, or redistribute our content without
-        attribution and a link back to the original page.
-      </p>
-      <h2>Accuracy</h2>
-      <p>
-        We strive for accuracy but make no warranties regarding the completeness or correctness of
-        any content. {game} is frequently updated, and information may become outdated. Always
-        verify critical information in-game.
-      </p>
-      <h2>Third-Party Links</h2>
-      <p>
-        This site links to external websites (official game channels, video tutorials, etc.) that we
-        do not control. We are not responsible for the content or practices of third-party sites.
-      </p>
-      <h2>Trademarks</h2>
-      <p>
-        {game} and all related trademarks, logos, and assets are the property of{' '}
-        {site.game.developer}. {site.name} is an independent fan project and is not affiliated with
-        or endorsed by {site.game.developer}.
-      </p>
-      <h2>Limitation of Liability</h2>
-      <p>
-        Use of this site is at your own risk. We are not liable for any damages arising from your
-        use of the site or reliance on its content.
-      </p>
-      <h2>Changes to These Terms</h2>
-      <p>
-        We may revise these terms at any time. Continued use of the site after changes constitutes
-        acceptance of the updated terms.
-      </p>
-    </>
-  )
-}
-
-{
-  page === 'copyright' && (
-    <>
-      <h2>Copyright Notice</h2>
-      <p>
-        © {year} {site.name}. All original articles, guides, and written content on this site are
-        the intellectual property of {site.name} and its contributors.
-      </p>
-      <h2>Game Assets</h2>
-      <p>
-        {game}, including its name, logo, characters, artwork, and other related assets, is the
-        property of {site.game.developer}. All {game} content is used on this wiki under fair use
-        for the purpose of providing informational guides to players. {site.name} claims no
-        ownership of any {game} intellectual property.
-      </p>
-      <h2>DMCA / Takedown</h2>
-      <p>
-        If you believe any content on this site infringes your copyright, please contact us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
-        </a>{' '}
-        with a detailed description of the allegedly infringing material. We will review and respond
-        to valid requests promptly.
-      </p>
-      <h2>Fan-Made Notice</h2>
-      <p>{site.legalNotice}</p>
-    </>
-  )
-}
-
-{
-  page === 'contact' && (
-    <>
-      {/* h2, not h1 — LegalPage already renders the page H1 (single-H1 rule). */}
-      <h2>Contact {site.name}</h2>
-      <p>
-        {site.name} is a fan-made wiki. Reach us or contribute through any of the channels below.
-      </p>
-      <h2>Community</h2>
-      <ul>
-        {site.social.official && (
-          <li>
-            <strong>Official game website:</strong>{' '}
-            <a href={site.social.official} target="_blank" rel="noopener noreferrer">
-              {site.social.official}
-            </a>
-          </li>
-        )}
-        {site.social.discord && (
-          <li>
-            <strong>Discord:</strong>{' '}
-            <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-              Join our server
-            </a>
-          </li>
-        )}
-        {site.social.reddit && (
-          <li>
-            <strong>Reddit:</strong>{' '}
-            <a href={site.social.reddit} target="_blank" rel="noopener noreferrer">
-              r/{site.game.name.replace(/\s+/g, '')}
-            </a>
-          </li>
-        )}
-        {site.social.youtube && (
-          <li>
-            <strong>YouTube:</strong>{' '}
-            <a href={site.social.youtube} target="_blank" rel="noopener noreferrer">
-              {site.name} channel
-            </a>
-          </li>
-        )}
-        {site.contactEmail && (
-          <li>
-            <strong>Email:</strong> <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-          </li>
-        )}
-      </ul>
-      <h2>Contributing</h2>
-      <p>
-        Found a typo or outdated info? Want to add a guide? This wiki is open source — submit changes
-        via pull requests or through any channel listed above.
-      </p>
-      <h2>Reporting Issues</h2>
-      <p>
-        For copyright or takedown requests, see our{' '}
-        <a href="/copyright/">Copyright page</a>.
-      </p>
-    </>
-  )
-}
+{page === 'about' && <>
+  <p>{site.description}</p><p>{site.legalNotice}</p>
+  <h2>How the guide is prepared</h2>
+  <p>Articles link to official store information, developer announcements and relevant community reports. Community suggestions are labeled. Missing or disputed requirements are identified instead of guessed. A source review does not imply firsthand testing.</p>
+  <h2>Versions and corrections</h2>
+  <p>Each guide identifies its scope and review date. Demo information is kept separate from the full game. Guides are revised for evidence-backed corrections or material game changes, rather than to refresh their dates.</p>
+  <h2>Independent project</h2>
+  <p>The site is freely accessible without an account. It uses the MIT-licensed <a href="https://github.com/PNGTRID/AnvilWiki">AnvilWiki template</a>. Original editorial illustrations are labeled and do not depict game screenshots.</p>
+  <p>Report errors through <a href="/contact/">Contact</a>. Game support is handled by the developer.</p>
+</>}
+{page === 'privacy-policy' && <>
+  <p>This page describes the features currently enabled on {site.name}.</p>
+  <h2>Site access and preferences</h2>
+  <p>No account is required, and there is no personal-information form. Search runs through a static Pagefind index. Theme preferences and article feedback may be saved in your browser's local storage.</p>
+  <h2>Hosting</h2>
+  <p>Cloudflare serves this site and may process request information for delivery, security and performance under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
+  <h2>Analytics and advertising</h2>
+  {analyticsEnabled ? <p>Analytics is enabled. Cookie-based analytics loads after consent; a configured Cloudflare beacon uses its own data practices.</p> : <p>Google Analytics and the optional Cloudflare Web Analytics beacon are disabled in the current configuration.</p>}
+  {adsEnabled ? <p>Advertising is enabled. Configured advertising scripts load after consent.</p> : <p>Advertising scripts and ad slots are disabled in the current configuration.</p>}
+  <h2>External services</h2>
+  <p>External links lead to services with their own privacy policies. On pages with YouTube videos, thumbnails load from YouTube and the embedded player loads after you press play. Correction reports submitted to GitHub are public; do not include private files, credentials or personal details.</p>
+  <h2>Changes and contact</h2>
+  <p>This page will change if enabled services change. See <a href="/contact/">Contact</a> for questions.</p>
+</>}
+{page === 'terms-of-service' && <>
+  <p>{site.name} provides informational guides to {site.game.name}.</p>
+  <h2>Use and accuracy</h2>
+  <p>Content reflects the sources and versions stated on each page. The game may change, and some requirements remain unverified. Check current in-game instructions when information conflicts. No result or achievement unlock is guaranteed.</p>
+  <h2>External links</h2>
+  <p>External sites are controlled by their operators. Links provide sources or official support; they do not imply endorsement.</p>
+  <h2>Attribution</h2>
+  <p>Game names and trademarks belong to their owners. The underlying AnvilWiki code retains its MIT license. See <a href="/copyright/">Copyright</a> for the distinction between template code, original editorial work and third-party material.</p>
+  <h2>Corrections</h2><p>Report material errors through <a href="/contact/">Contact</a>, with the affected page and supporting evidence.</p>
+</>}
+{page === 'copyright' && <>
+  <h2>Original editorial work</h2>
+  <p>© {year} {site.name}. Original text and editorial illustrations are created for this guide. Illustrations are diagrams or decorative artwork, not extracted game assets.</p>
+  <h2>Template license</h2>
+  <p>The site uses <a href="https://github.com/PNGTRID/AnvilWiki">AnvilWiki</a> under its MIT license. The repository preserves the original license and copyright notice.</p>
+  <h2>Game and source material</h2>
+  <p>Game names, trademarks and third-party material belong to their owners. Linking a source does not grant permission to redistribute its artwork. We do not claim ownership of game assets or a blanket permission to reproduce them.</p>
+  <h2>Rights requests</h2><p>Use <a href="/contact/">Contact</a> with the affected URL and material. Omit sensitive personal information from public reports.</p>
+  <p>{site.legalNotice}</p>
+</>}
+{page === 'contact' && <>
+  <h2>Wiki corrections and rights requests</h2>
+  {site.contributionsUrl && <p>Use the <a href={site.contributionsUrl}>wiki issue tracker</a> for guide errors, broken links or rights concerns. Include the page URL and evidence. This is public; do not post private information.</p>}
+  {site.contactEmail && <p>Email: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
+  <h2>Official game support</h2>
+  <p>The wiki is independent. For game issues, use the <a href={site.social.official}>official game page</a>{site.social.discord && <> or <a href={site.social.discord}>developer's Discord</a></>}.</p>
+  <h2>Contributing</h2><p>Identify the game version and distinguish observed results from assumptions. Reproducible evidence is especially useful for unverified requirements.</p>
+</>}

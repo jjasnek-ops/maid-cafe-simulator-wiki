@@ -1,0 +1,484 @@
+{
+  "collectedAt": "2026-10-10",
+  "market": "US English",
+  "distinction": "Missing metrics and tool noncoverage are not zero demand.",
+  "records": [
+    {
+      "keyword": "maid cafe simulator",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": 65.5,
+      "volume": 50,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "user_supplied_historical",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator guide",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": 18.2,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator wiki",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": 17.8,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator achievements",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator walkthrough",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator recipes",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator maids",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator bond stories",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator maidchelin",
+      "source": "user research",
+      "collectedAt": null,
+      "kd": null,
+      "volume": null,
+      "volumeMarket": "US",
+      "volumeUnit": "monthly searches",
+      "volumeStatus": "tool_not_indexed",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator steam",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator game",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator roblox",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator demo",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator recipes",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe yandere simulator",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "kawaii dreams maid cafe simulator",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe sakura school simulator",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe locations",
+      "source": "Google Suggest en-US",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator main story mission 6 7",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator not progressing",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator promo photo",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator gifts",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator maids on duty",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator controller support",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator dlc",
+      "source": "Steam App 3232690 discussions; query phrasing is editorial",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": true
+    },
+    {
+      "keyword": "maid cafe simulator endings",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator upgrades",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator money",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator tips",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator troubleshooting",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator demo save transfer",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator cafe level cap",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator maid level cap",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator three stars",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator yuki",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator jennie",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator momo",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator omu",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator mina",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator favorite foods",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator hidden achievements",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator first sale",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator exact change pro",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator nothing left to learn",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator dance stage",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator performance stage",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator festivals",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator system requirements",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator steam deck",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    },
+    {
+      "keyword": "maid cafe simulator multiplayer",
+      "source": "editorial candidate from verified game features; demand unverified",
+      "collectedAt": "2026-10-10",
+      "volume": null,
+      "kd": null,
+      "volumeStatus": "not_measured",
+      "live": false
+    }
+  ]
+}

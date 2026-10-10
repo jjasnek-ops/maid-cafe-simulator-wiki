@@ -12,11 +12,11 @@
 @layer base {
   :root {
     /* Light mode theme color — Anvil orange (forge fire). */
-    --brand: 22 90% 52%;
-    --brand-light: 22 90% 62%;
+    --brand: 334 55% 55%;
+    --brand-light: 334 55% 65%;
     /* Split H/S for derived shades (e.g. darker button backgrounds). */
-    --brand-h: 22;
-    --brand-s: 90%;
+    --brand-h: 334;
+    --brand-s: 55%;
     /* Text-safe shade of the brand: --brand at 52% lightness is only 3.1:1
        on white (WCAG AA needs 4.5:1 for text). Derived from the H/S splits,
        so fork themes that only edit --brand/--brand-light stay consistent. */
@@ -25,10 +25,10 @@
 
   .dark {
     /* Dark mode theme color — slightly deeper. */
-    --brand: 22 85% 48%;
-    --brand-light: 22 85% 58%;
-    --brand-h: 22;
-    --brand-s: 85%;
+    --brand: 334 50% 51%;
+    --brand-light: 334 50% 61%;
+    --brand-h: 334;
+    --brand-s: 50%;
     --brand-text: var(--brand-h) var(--brand-s) 52%;
   }
 }
@@ -36,11 +36,11 @@
 /* Other design tokens — these reference --brand, so they auto-follow theme changes. */
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 38 100% 98%;
     --foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
+    --muted: 148 23% 94%;
     --muted-foreground: 215 16% 47%;
-    --border: 214 32% 91%;
+    --border: 340 24% 88%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
   }
@@ -178,3 +178,17 @@
 
 /* Theme initialization script — runs before paint to avoid FOUC. */
 /* The actual <script> is injected in BaseLayout.astro. */
+
+/* Cafe editorial artwork: original vector, with no copied game assets. */
+main > section.relative.flex.items-center.overflow-hidden.border-b {
+  background-image: url('/images/articles/cafe-editorial.svg');
+  background-repeat: no-repeat;
+  background-position: calc(50% + 335px) center;
+  background-size: min(47vw, 590px) auto;
+}
+main > section.relative.flex.items-center.overflow-hidden.border-b h1 { max-width: 640px; }
+@media (max-width: 1023px) {
+  main > section.relative.flex.items-center.overflow-hidden.border-b { background-image: none; }
+}
+.dark main > section.relative.flex.items-center.overflow-hidden.border-b { background-blend-mode: luminosity; }
+@media (max-width: 767px) { .prose table th, .prose table td { min-width: 170px; } }

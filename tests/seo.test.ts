@@ -116,6 +116,7 @@ describe('SEO helpers', () => {
         categoryLabel: 'ボス一覧',
         title: 'エンバーファング攻略',
         slug: 'emberfang',
+        // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
         locale: 'ja',
       });
       expect(json.itemListElement[0].item).toMatch(/\/ja\/$/);
@@ -128,6 +129,7 @@ describe('SEO helpers', () => {
         const json = simpleBreadcrumbJsonLd({
           pageLabel: 'All Bosses',
           path: '/bosses/',
+          // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
           locale,
         });
         expect(json['@type']).toBe('BreadcrumbList');
@@ -182,8 +184,9 @@ describe('SEO helpers', () => {
     });
 
     it('skips the suffix when the title already carries the game name', () => {
-      const t = pageTitle('Anvil Quest Boss Guide');
-      expect(t).toBe('Anvil Quest Boss Guide');
+      const title = `${site.game.name} Guide`;
+      const t = pageTitle(title);
+      expect(t).toBe(title);
     });
 
     it('switches to the short suffix for long titles (>50 chars)', () => {

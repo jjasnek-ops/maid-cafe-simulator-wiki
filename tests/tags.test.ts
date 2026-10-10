@@ -31,8 +31,11 @@ describe('tag/recent URL helpers', () => {
     expect(recentPath('en')).toBe('/recent/');
   });
   it('prefixes non-default locales', () => {
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(tagsPath('ja')).toBe('/ja/tags/');
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(tagPath('fire-boss', 'ja')).toBe('/ja/tags/fire-boss/');
+    // @ts-expect-error Intentional multilingual fixture outside the configured English Locale union.
     expect(recentPath('ja')).toBe('/ja/recent/');
   });
 });

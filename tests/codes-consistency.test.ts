@@ -35,7 +35,8 @@ import { describe, expect, it } from 'vitest';
  * sentence that IS present still fails.
  */
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+// This suite verifies the upstream demo codes, which this Steam site does not publish.
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), 'fixtures/anvilwiki');
 const LOCALES = ['en', 'ja'] as const;
 
 const MONTHS: Record<string, string> = {

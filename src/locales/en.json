@@ -1,23 +1,21 @@
 {
   "$schema": "../../docs/home.schema.json",
   "site": {
-    "name": "Anvil Quest Wiki",
-    "shortName": "AQ Wiki",
-    "description": "Complete Anvil Quest wiki with boss guides, tier lists, codes, item locations, and beginner tips. Every guide carries a last-verified date.",
-    "tagline": "Your forge for everything Anvil Quest",
-    "legalNotice": "Anvil Quest Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer."
+    "name": "Maid Cafe Simulator Wiki",
+    "shortName": "MCS Wiki",
+    "description": "An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting.",
+    "tagline": "Make every shift count.",
+    "legalNotice": "Independent fan guide for Steam App 3232690. Not affiliated with Accelix, SCON or Valve. Game names and trademarks belong to their owners."
   },
   "nav": {
     "home": "Home",
-    "bosses": "Bosses",
-    "guides": "Guides",
-    "items": "Items",
-    "codes": "Codes",
     "toggleTheme": "Toggle theme",
     "menu": "Menu",
     "close": "Close",
     "search": "Search",
-    "language": "Language"
+    "language": "Language",
+    "guides": "Guides",
+    "reference": "Reference"
   },
   "search": {
     "placeholder": "Search the wiki...",
@@ -28,7 +26,7 @@
     "lastUpdated": "Last updated",
     "publishedOn": "Published",
     "noArticles": "No articles yet. Check back soon!",
-    "defaultListDescription": "Browse every {title} article — walkthroughs, tips, tier lists and up-to-date reference tables, all in one place.",
+    "defaultListDescription": "Browse sourced guides and reference tables for {title}.",
     "relatedArticles": "Related Articles",
     "onThisPage": "On this page",
     "browseAll": "Browse all",
@@ -57,24 +55,7 @@
       "source": "Source",
       "code": "Code"
     },
-    "codesFaq": [
-      {
-        "question": "How do I redeem codes?",
-        "answer": "Open the game, click the settings gear in the top-right, paste your code into the Redeem Code field, and confirm. Codes are case-sensitive."
-      },
-      {
-        "question": "Why do codes stop working?",
-        "answer": "Codes expire on a schedule set by the developer (usually monthly or tied to update milestones), and some are one-per-account. This page is re-tested regularly."
-      },
-      {
-        "question": "How often are new codes released?",
-        "answer": "New codes typically arrive with each major game update. Bookmark this page and check back after every patch."
-      },
-      {
-        "question": "Do codes expire?",
-        "answer": "Yes — most codes have an expiry date, shown next to each code. Expired codes move to the expired table below."
-      }
-    ],
+    "codesFaq": [],
     "possiblyOutdated": "This guide was last checked on",
     "outdatedNote": "— the game may have changed since. Some details could be out of date.",
     "prevArticle": "Previous",
@@ -89,13 +70,13 @@
     "allTags": "All Tags",
     "tagsIndexDescription": "Browse all articles by topic.",
     "articlesCount": "articles",
-    "recentTitle": "Recent Updates",
+    "recentTitle": "Latest guides",
     "recentDescription": "The latest articles and updates across the wiki, newest first.",
     "sponsorTitle": "Support this wiki",
     "sponsorText": "If these guides helped you, consider supporting the site.",
     "sponsorButton": "Support us",
     "notFoundSearchHint": "Try searching the wiki instead.",
-    "notFoundPopular": "Popular pages",
+    "notFoundPopular": "Browse the wiki",
     "notFoundTitle": "404 - Page Not Found",
     "notFoundDescription": "The page you are looking for does not exist.",
     "notFoundHeading": "Page Not Found",
@@ -128,286 +109,230 @@
     "paginationAria": "Article pagination"
   },
   "overview": {
-    "bosses": {
-      "overviewTitle": "All Bosses",
-      "overviewDescription": "Complete strategy guides for every boss in Anvil Quest, including attack patterns, weaknesses, and recommended loadouts."
-    },
     "guides": {
-      "overviewTitle": "All Guides",
-      "overviewDescription": "In-depth tutorials covering progression, crafting, combat mechanics, and advanced strategies for Anvil Quest."
+      "overviewTitle": "Maid Cafe Simulator Guides",
+      "overviewDescription": "Sourced Steam guides for cafe operations, progression, demo save transfer and specific launch troubleshooting."
     },
-    "items": {
-      "overviewTitle": "All Items",
-      "overviewDescription": "Comprehensive item database with locations, stats, rarity tiers, and crafting recipes."
-    },
-    "codes": {
-      "overviewTitle": "All Codes",
-      "overviewDescription": "Active Anvil Quest codes for free coins, gems, and exclusive items. Verified daily."
+    "reference": {
+      "overviewTitle": "Maid Cafe Simulator Reference",
+      "overviewDescription": "Check the Steam achievement objectives, five maid characters and all twenty launch DLC entries in concise reference tables."
     }
   },
   "home": {
     "meta": {
-      "title": "Anvil Quest Wiki - Complete Boss Guides, Codes & Tier Lists",
-      "description": "The most complete Anvil Quest wiki. Boss strategies, active codes, item locations, tier lists, and beginner guides. Every page shows when it was last verified."
-    },
-    "hero": {
-      "badge": "Fan-Made Community Wiki",
-      "title": "Anvil Quest Wiki",
-      "description": "Your complete guide to Anvil Quest. Boss strategies, active codes, item locations, tier lists, and everything you need to master the forge.",
-      "ctaPrimary": "Play Anvil Quest",
-      "ctaSecondary": "Browse Guides",
-      "videoId": ""
+      "title": "Maid Cafe Simulator Wiki & Steam Guides",
+      "description": "An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting."
     },
     "updates": {
-      "title": "Recent Updates"
+      "title": "Steam launch guides"
     },
-    "start": {
-      "badge": "Start Here",
-      "title": "Your Anvil Quest Journey",
-      "cards": [
+    "popular": {
+      "badge": "Find your answer",
+      "title": "Quick reference",
+      "quickLinks": [
         {
-          "number": "1",
-          "title": "Beginner Guide",
-          "description": "New to Anvil Quest? Start here with the essential mechanics, controls, and your first hour walkthrough.",
-          "icon": "lucide:book-open",
-          "href": "/guides/beginner-guide"
+          "label": "Walkthrough: Starting Your Cafe",
+          "href": "/guides/walkthrough/"
         },
         {
-          "number": "2",
-          "title": "Active Codes",
-          "description": "Redeem the latest codes for free coins, gems, and exclusive cosmetic items.",
-          "icon": "lucide:gift",
-          "href": "/codes"
+          "label": "Achievements: All 23 Listed",
+          "href": "/reference/achievements/"
         },
         {
-          "number": "3",
-          "title": "Boss Strategies",
-          "description": "Complete guides for every boss with attack patterns, weaknesses, and recommended loadouts.",
-          "icon": "lucide:swords",
-          "href": "/bosses"
+          "label": "Progression: Levels, Upgrades and Stages",
+          "href": "/guides/progression/"
         },
         {
-          "number": "4",
-          "title": "Weapon Tier List",
-          "description": "Ranking every weapon from S to C based on DPS, utility, and synergy.",
-          "icon": "lucide:list-ordered",
-          "href": "/guides/weapon-tier-list"
+          "label": "Story and Cafe Troubleshooting",
+          "href": "/guides/troubleshooting/"
+        },
+        {
+          "label": "Demo Save Transfer: How to Continue",
+          "href": "/guides/demo-save-transfer/"
+        },
+        {
+          "label": "Maids and Bond Stories",
+          "href": "/reference/maids-and-bonds/"
+        },
+        {
+          "label": "DLC: Outfits and Maidroids Explained",
+          "href": "/reference/dlc/"
         }
       ]
     },
-    "popular": {
-      "badge": "Trending Now",
-      "title": "Most Read This Week",
-      "quickLinks": [
+    "closingCta": {
+      "title": "Make every shift count.",
+      "description": "Read the verified basics, then follow the objective shown in your game. Check the source notes when a detail is uncertain.",
+      "primary": "View on Steam",
+      "secondary": ""
+    },
+    "hero": {
+      "badge": "STEAM EDITION · APP 3232690",
+      "title": "Maid Cafe Simulator Wiki",
+      "description": "Your next shift, explained. Sourced guides to running the cafe, meeting the maids and checking every Steam achievement.",
+      "ctaPrimary": "View on Steam",
+      "ctaSecondary": "Browse reference",
+      "videoId": ""
+    },
+    "start": {
+      "badge": "Start your shift",
+      "title": "Where would you like to begin?",
+      "cards": [
         {
-          "label": "Emberfang Boss Guide",
-          "href": "/bosses/emberfang"
+          "number": "01",
+          "title": "Run your cafe",
+          "description": "Orders, receipts, restocking and your first shifts.",
+          "icon": "lucide:coffee",
+          "href": "/guides/walkthrough/"
         },
         {
-          "label": "Best Weapons Tier List",
-          "href": "/guides/weapon-tier-list"
+          "number": "02",
+          "title": "Check achievements",
+          "description": "23 entries, public objectives and hidden-condition limits.",
+          "icon": "lucide:trophy",
+          "href": "/reference/achievements/"
         },
         {
-          "label": "Beginner Guide",
-          "href": "/guides/beginner-guide"
+          "number": "03",
+          "title": "Meet the maids",
+          "description": "Five characters and what is known about their stories.",
+          "icon": "lucide:heart",
+          "href": "/reference/maids-and-bonds/"
         },
         {
-          "label": "All Active Codes",
-          "href": "/codes"
+          "number": "04",
+          "title": "Unstick your story",
+          "description": "Specific community checks, clearly labeled.",
+          "icon": "lucide:circle-help",
+          "href": "/guides/troubleshooting/"
         }
       ]
     },
     "explore": {
-      "title": "Explore the Wiki",
-      "description": "Everything you need, organized by category. Pick a topic and dive in.",
+      "title": "Explore Maid Cafe Simulator",
+      "description": "Full-game launch information, with demo details kept separate.",
       "modules": [
         {
           "order": 1,
-          "name": "Anvil Quest Codes",
-          "description": "Active codes for free coins, gems, and exclusive items. Updated daily.",
-          "href": "/codes",
-          "displayType": "badge-list",
+          "name": "Maid Cafe Simulator Progression",
+          "description": "Understand the confirmed full-game systems.",
+          "href": "/guides/progression/",
+          "displayType": "labeled-cards",
           "highlights": [
             {
-              "label": "HEARTHFIRE-2026",
-              "detail": "+600 Gold · expires Nov 30 (extended)",
-              "badge": "Active"
+              "label": "Cafe levels",
+              "detail": "Full-game cap: 40",
+              "badge": "Confirmed"
             },
             {
-              "label": "ASHENKEEP",
-              "detail": "Ashen Keep cosmetic set",
-              "badge": "Active"
+              "label": "Maid levels",
+              "detail": "Full-game cap: 15",
+              "badge": "Confirmed"
             },
             {
-              "label": "NEWPLAYER",
-              "detail": "Starter bundle (new accounts)",
-              "badge": "Active"
+              "label": "Two stages",
+              "detail": "Dance tips and Performance filming",
+              "badge": "Distinct systems"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Boss Strategies",
-          "description": "Complete guides for every boss with attack patterns and weaknesses.",
-          "href": "/bosses",
-          "displayType": "labeled-cards",
+          "name": "Maid Cafe Simulator Demo Saves",
+          "description": "Continue the demo from the full game’s save screen.",
+          "href": "/guides/demo-save-transfer/",
+          "displayType": "steps",
           "highlights": [
             {
-              "label": "Emberfang",
-              "detail": "Frost warden, early-game gatekeeper"
+              "label": "1",
+              "detail": "Open the full game’s save screen",
+              "badge": "Steam"
             },
             {
-              "label": "Stormcaller",
-              "detail": "Fire titan, mid-game DPS check"
+              "label": "2",
+              "detail": "Select the slot labeled [Demo]",
+              "badge": "Developer instruction"
             },
             {
-              "label": "Voidking",
-              "detail": "Final boss, requires full prep"
+              "label": "3",
+              "detail": "Continue beyond the demo chapters",
+              "badge": "Full game"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Progression Guides",
-          "description": "Leveling routes, class builds, and endgame preparation.",
-          "href": "/guides",
-          "displayType": "steps",
+          "name": "Maid Cafe Simulator DLC",
+          "description": "See exactly which maid each item supports.",
+          "href": "/reference/dlc/",
+          "displayType": "labeled-cards",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Pick a starting class"
+              "label": "20 DLC entries",
+              "detail": "Three outfits and one Maidroid per maid",
+              "badge": "Launch catalog"
             },
             {
-              "label": "2",
-              "detail": "Clear the tutorial forge"
-            },
-            {
-              "label": "3",
-              "detail": "Unlock the Shattered Isles"
-            },
-            {
-              "label": "4",
-              "detail": "Defeat your first world boss"
+              "label": "Base game",
+              "detail": "Developer says DLC is optional",
+              "badge": "Confirmed"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Weapon Tier List",
-          "description": "Ranking every weapon from S to C based on DPS, utility, and synergy.",
-          "href": "/guides/weapon-tier-list",
-          "displayType": "ranked-grid",
+          "name": "Maid Cafe Simulator Achievements",
+          "description": "Keep published tasks separate from unknown conditions.",
+          "href": "/reference/achievements/",
+          "displayType": "labeled-cards",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Voidforge Blade, Stormcaller"
+              "label": "20 public objectives",
+              "detail": "Track the requirements Steam describes",
+              "badge": "Reference"
             },
             {
-              "label": "A",
-              "detail": "Emberclaw, Frostpike"
-            },
-            {
-              "label": "B",
-              "detail": "Ironwood Bow, Mace of Dawn"
-            },
-            {
-              "label": "C",
-              "detail": "Starter weapons"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "name": "Update History",
-          "description": "Major patches and events, newest first.",
-          "href": "/recent",
-          "displayType": "timeline",
-          "highlights": [
-            {
-              "label": "v2.5",
-              "detail": "New raid: Shadowforge released",
-              "badge": "Latest"
-            },
-            {
-              "label": "v2.4",
-              "detail": "Rebalanced all S-tier weapons"
-            },
-            {
-              "label": "v2.3",
-              "detail": "Added 3 new bosses"
-            },
-            {
-              "label": "v2.2",
-              "detail": "Launched season pass system"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "name": "Video Guides",
-          "description": "Watch the best Anvil Quest walkthroughs and boss fights.",
-          "href": "/guides",
-          "displayType": "video-grid",
-          "highlights": [
-            {
-              "title": "Beginner Walkthrough",
-              "youtubeId": "dQw4w9WgXcQ",
-              "duration": "12:34"
-            },
-            {
-              "title": "All Bosses Ranked",
-              "youtubeId": "aaaaaaaaaaa",
-              "duration": "18:42"
-            },
-            {
-              "title": "Speedrun Guide",
-              "youtubeId": "bbbbbbbbbbb",
-              "duration": "25:10"
-            },
-            {
-              "title": "Hidden Secrets",
-              "youtubeId": "ccccccccccc",
-              "duration": "9:15"
+              "label": "3 hidden entries",
+              "detail": "Exact unlock conditions unverified",
+              "badge": "Evidence gap"
             }
           ]
         }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about Anvil Quest.",
+      "title": "Maid Cafe Simulator FAQ",
+      "description": "Answers about the Steam edition, demo saves, progression and this independent guide.",
       "items": [
         {
-          "question": "What is Anvil Quest?",
-          "answer": "Anvil Quest is a fantasy RPG on Roblox where you play as a blacksmith apprentice forging weapons and battling bosses across the Shattered Isles. It launched in January 2026 and has over 12 million visits."
+          "question": "Which Maid Cafe Simulator does this wiki cover?",
+          "answer": "The Steam game by Accelix and SCON, App ID 3232690. This is an independent guide and covers no Roblox mechanics or redemption codes."
         },
         {
-          "question": "Which class should beginners pick in Anvil Quest?",
-          "answer": "Warrior is the most beginner-friendly class thanks to high HP and simple mechanics. Once you understand the game, Rogue offers the highest damage output for experienced players."
+          "question": "Can you transfer a demo save into the full game?",
+          "answer": "Yes. The full-game launch announcement says to select the slot labeled [Demo] on the save screen. An older September demo update separately invalidated saves from earlier demo builds."
         },
         {
-          "question": "How do I redeem codes in Anvil Quest?",
-          "answer": "Open the game, click the settings gear in the top-right, paste your code into the 'Redeem Code' field, and hit confirm. Codes are case-sensitive."
+          "question": "What are the full-game level caps?",
+          "answer": "The developer’s launch announcement gives a cafe level cap of 40 and a maid level cap of 15. Demo caps are different."
         },
         {
-          "question": "Is Anvil Quest free to play?",
-          "answer": "Yes, Anvil Quest is completely free on Roblox. There are optional cosmetic microtransactions, but they do not affect gameplay balance."
+          "question": "How many Steam achievements are listed?",
+          "answer": "23: twenty with public objectives and three with hidden descriptions. This wiki lists the hidden names without inventing their unlock conditions."
         },
         {
-          "question": "How often does Anvil Quest update?",
-          "answer": "Forge Studios releases major content updates roughly every two weeks, with smaller hotfixes in between. New bosses and codes are typically added with each major patch."
+          "question": "Do you need DLC to finish the base game?",
+          "answer": "The developer says all DLC is optional and the complete base game can be played without it. Outfit DLC is character-specific; Maidroid DLC adds a helper that can be assigned jobs."
+        },
+        {
+          "question": "Does this wiki have every recipe and every ending?",
+          "answer": "Complete recipe quantities, all chapter steps and branching ending triggers have not been verified. They are held back rather than presented as complete guides."
         }
       ]
-    },
-    "closingCta": {
-      "title": "Ready to Master the Forge?",
-      "description": "Bookmark this wiki and check back daily for new codes, boss guides, and tier list updates.",
-      "primary": "Play Anvil Quest",
-      "secondary": "Join Our Discord"
     }
   },
   "footer": {
-    "playGame": "Play Anvil Quest",
+    "playGame": "Play Maid Cafe Simulator",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
     "officialTwitter": "Official Twitter",
@@ -418,7 +343,7 @@
     "termsOfService": "Terms of Service",
     "copyright": "Copyright",
     "contact": "Contact",
-    "copyrightText": "© 2026 Anvil Quest Wiki. Fan-made, not affiliated with Forge Studios.",
+    "copyrightText": "© 2026 Maid Cafe Simulator Wiki. All rights reserved.",
     "community": "Community",
     "legal": "Legal"
   }

@@ -11,5 +11,7 @@ export default defineConfig({
   test: {
     environment: 'node',
     include: ['tests/**/*.test.ts'],
+    // Official apply-template removes the template marketing site and its redirects.
+    exclude: ['tests/upstream-only/**'],
   },
 });

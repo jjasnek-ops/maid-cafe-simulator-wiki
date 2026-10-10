@@ -1,3 +1,4 @@
+import { locales, defaultLocale } from '~/i18n/routing';
 /**
  * routing-flags reader tests — the shared regex extraction from
  * src/i18n/routing.ts used by six scripts (check-config, check-i18n,
@@ -33,12 +34,12 @@ function makeRoutingFixture(content: string): string {
 
 describe('readLocales / readDefaultLocale — success', () => {
   test('parses the real repo routing.ts', () => {
-    expect(readLocales(repoRoot)).toEqual(['en', 'ja']);
-    expect(readDefaultLocale(repoRoot)).toBe('en');
+    expect(readLocales(repoRoot)).toEqual([...locales]);
+    expect(readDefaultLocale(repoRoot)).toBe(defaultLocale);
   });
 
   test('default root is the process cwd (repo root under vitest)', () => {
-    expect(readLocales()).toEqual(['en', 'ja']);
+    expect(readLocales()).toEqual([...locales]);
   });
 
   test('accepts defaultLocale with and without the `: Locale` annotation', () => {
