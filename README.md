@@ -27,10 +27,10 @@ Game identity is configured in `src/config/site.ts`, navigation in `src/config/n
 
 ## Deployment
 
-Cloudflare Pages project: `maid-cafe-simulator-wiki`, production branch: `main`. The initial release uses a direct upload. GitHub source hosting alone does not enable automatic Cloudflare deployment.
+Cloudflare Pages project: `maid-cafe-simulator-wiki`, production branch: `main`. The initial release uses a direct upload. GitHub source hosting alone does not enable automatic Cloudflare deployment. Supply the current commit SHA when building so the native IndexNow workflow can identify the deployed revision.
 
 ```sh
-pnpm build
+CF_PAGES_COMMIT_SHA="$(git rev-parse HEAD)" pnpm build
 npm exec --yes --package=wrangler@4.149.0 -- wrangler pages deploy dist --project-name maid-cafe-simulator-wiki --branch main
 ```
 
