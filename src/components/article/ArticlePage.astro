@@ -16,8 +16,8 @@ import { Icon } from 'astro-icon/components';
 import { render } from 'astro:content';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import InContentAd from '~/components/ads/InContentAd.astro';
-import MobileAnchorAd from '~/components/ads/MobileAnchorAd.astro';
-import AdsterraSlotPair from '~/components/ads/AdsterraSlotPair.astro';
+import AdsterraSlot from '~/components/ads/AdsterraSlot.astro';
+import FooterAd from '~/components/ads/FooterAd.astro';
 import AffiliateSuggestion from '~/components/ads/AffiliateSuggestion.astro';
 import Comments from '~/components/article/Comments.astro';
 import TableOfContents from '~/components/article/TableOfContents.astro';
@@ -370,6 +370,8 @@ const jsonLd = [
       <Content />
     </div>
 
+    <AdsterraSlot name="native-banner" width={800} height={200} responsive />
+
     {/* Fallback videos — only IDs NOT inlined in the body via <Video/>.
         Inline <Video> is the preferred placement; this bottom section is a
         legacy/fallback so frontmatter-only articles keep working. */}
@@ -406,9 +408,6 @@ const jsonLd = [
 
     {/* In-content ad before related articles */}
     <InContentAd />
-    {/* Adsterra pair: 728×90 here, responsive native after the Related
-        section (end-of-content position) — same DOM order as before. */}
-    <AdsterraSlotPair>
     {/* Related */}
     {
       related.length > 0 && (
@@ -430,7 +429,6 @@ const jsonLd = [
         </section>
       )
     }
-    </AdsterraSlotPair>
     {/* Prev / Next within the same category */}
     {(olderEntry || newerEntry) && (
       <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label={shared.paginationAria ?? 'Article pagination'}>
@@ -482,9 +480,8 @@ const jsonLd = [
     {/* Affiliate suggestions — config empty = component renders nothing (v2.0) */}
     <AffiliateSuggestion locale={locale} category={entry.data.category} />
 
-    {/* Adsterra 320×50 bottom anchor — mobile only, dismissible, consent-gated;
-        env empty = renders nothing (zero-ad fork contract). */}
-    <MobileAnchorAd />
+    <AdsterraSlot name="incontent-728x90" width={728} height={90} hideOnMobile />
+    <FooterAd />
   </article>
     {/* Desktop TOC — sticky, between article and sidebar */}
     <div class="hidden w-56 shrink-0 lg:block xl:w-64">

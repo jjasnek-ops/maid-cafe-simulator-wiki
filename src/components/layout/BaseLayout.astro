@@ -17,6 +17,7 @@ import { organizationJsonLd } from '~/lib/seo';
 import JsonLd from '~/components/seo/JsonLd.astro';
 import CookieConsent from './CookieConsent.astro';
 import { getUi } from '~/i18n/ui';
+import { needsTrackingConsent } from '~/lib/adsterra-config';
 
 interface Props {
   title: string;
@@ -334,7 +335,7 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
   <body class="min-h-screen bg-background text-foreground antialiased">
     <slot />
     {/* Consent banner — only rendered when tracking env vars are set. */}
-    {(gaId || adsenseClient) && (
+    {needsTrackingConsent && (
       <CookieConsent
         labels={{
           title: consentLabels.title,

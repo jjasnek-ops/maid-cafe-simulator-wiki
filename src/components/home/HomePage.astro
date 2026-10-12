@@ -22,6 +22,8 @@ import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import VideoSection from '~/components/home/VideoSection.astro';
 import QuickStart from '~/components/home/QuickStart.astro';
 import ExploreModules from '~/components/home/ExploreModules.astro';
+import AdsterraSlot from '~/components/ads/AdsterraSlot.astro';
+import FooterAd from '~/components/ads/FooterAd.astro';
 import { site } from '~/config/site';
 import { NAVIGATION_CONFIG } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
@@ -131,6 +133,8 @@ function trendingLabel(link: QuickLink): string {
       </div>
     </div>
   </section>
+
+  <AdsterraSlot name="native-banner" width={800} height={200} responsive />
 
   {/* Trailer — only renders when a videoId is configured. */}
   {hero.videoId && (
@@ -259,4 +263,5 @@ function trendingLabel(link: QuickLink): string {
       </section>
     )
   }
+  <FooterAd />
 </LocaleLayout>

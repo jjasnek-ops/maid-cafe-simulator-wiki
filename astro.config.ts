@@ -11,6 +11,16 @@ import { CONTENT_TYPES } from './src/config/navigation';
 import { site as wikiSite } from './src/config/site';
 import { fallbackDetailPaths } from './src/lib/fallback-paths';
 
+// Direct-upload and CI builds need the same public vars as Pages builds.
+// Preserve explicit process env overrides; never import non-public secrets.
+const deploymentConfig = path.resolve('wrangler.toml');
+if (fs.existsSync(deploymentConfig)) {
+  const vars = fs.readFileSync(deploymentConfig, 'utf8').match(/\[vars\]\s*\n([\s\S]*?)(?=\n\[|$)/)?.[1] ?? '';
+  for (const match of vars.matchAll(/^(PUBLIC_[A-Z0-9_]+|SITE_URL)\s*=\s*("(?:[^"\\]|\\.)*")/gm)) {
+    if (process.env[match[1]] === undefined) process.env[match[1]] = JSON.parse(match[2]);
+  }
+}
+
 /**
  * Build a map of page path → lastmod ISO date, read from MDX frontmatter
  * (`lastModified` falling back to `date`). Used by the sitemap `serialize`
