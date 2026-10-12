@@ -27,6 +27,7 @@
             "description": { "type": "string", "minLength": 20 },
             "ctaPrimary": { "$ref": "#/$defs/cta" },
             "ctaSecondary": { "$ref": "#/$defs/cta" },
+            "image": { "type": "object", "required": ["src", "alt", "caption"], "properties": { "src": { "type": "string" }, "srcset": { "type": "string" }, "alt": { "type": "string" }, "caption": { "type": "string" } } },
             "videoId": { "type": "string", "description": "YouTube video ID — hero video is lazy-loaded, leave empty for none." }
           }
         },
@@ -51,6 +52,9 @@
                 "properties": {
                   "title": { "type": "string" },
                   "description": { "type": "string" },
+                  "image": { "type": "string", "description": "Optional local thumbnail." },
+                  "imageSrcset": { "type": "string" },
+                  "imageAlt": { "type": "string" },
                   "icon": { "type": "string", "examples": ["lucide:gift", "lucide:swords", "lucide:book-open"] },
                   "href": { "type": "string", "pattern": "^/" }
                 }

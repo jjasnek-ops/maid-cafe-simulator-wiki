@@ -179,16 +179,4 @@
 /* Theme initialization script — runs before paint to avoid FOUC. */
 /* The actual <script> is injected in BaseLayout.astro. */
 
-/* Cafe editorial artwork: original vector, with no copied game assets. */
-main > section.relative.flex.items-center.overflow-hidden.border-b {
-  background-image: url('/images/articles/cafe-editorial.svg');
-  background-repeat: no-repeat;
-  background-position: calc(50% + 335px) center;
-  background-size: min(47vw, 590px) auto;
-}
-main > section.relative.flex.items-center.overflow-hidden.border-b h1 { max-width: 640px; }
-@media (max-width: 1023px) {
-  main > section.relative.flex.items-center.overflow-hidden.border-b { background-image: none; }
-}
-.dark main > section.relative.flex.items-center.overflow-hidden.border-b { background-blend-mode: luminosity; }
 @media (max-width: 767px) { .prose table th, .prose table td { min-width: 170px; } }

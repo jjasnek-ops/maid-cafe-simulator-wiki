@@ -1,0 +1,17 @@
+---
+import { getUi } from '~/i18n/ui';
+interface Props {
+  src: string;
+  srcset?: string;
+  alt: string;
+  caption: string;
+}
+const { src, srcset, alt, caption } = Astro.props;
+const openImage = getUi(Astro.currentLocale ?? 'en').shared.openImage;
+---
+<figure class="not-prose my-8" data-editorial-figure>
+  <a href={src} target="_blank" rel="noopener" aria-label={`${openImage}: ${alt}`} class="block overflow-hidden rounded-xl border border-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-nav">
+    <img src={src} srcset={srcset} sizes={srcset ? '(max-width: 767px) calc(100vw - 32px), 768px' : undefined} alt={alt} width="1200" height="675" loading="lazy" decoding="async" class="aspect-video w-full object-contain" />
+  </a>
+  <figcaption class="mt-2 text-xs leading-relaxed text-muted-foreground">{caption} <span class="whitespace-nowrap">{openImage} ↗</span></figcaption>
+</figure>

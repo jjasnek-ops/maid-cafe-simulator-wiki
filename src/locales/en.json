@@ -106,7 +106,8 @@
     "feedbackNo": "No",
     "breadcrumbAria": "Breadcrumb",
     "wikiNavAria": "Wiki navigation",
-    "paginationAria": "Article pagination"
+    "paginationAria": "Article pagination",
+    "openImage": "Open full-size image"
   },
   "overview": {
     "guides": {
@@ -172,7 +173,13 @@
       "description": "Your next shift, explained. Sourced guides to running the cafe, meeting the maids and checking every Steam achievement.",
       "ctaPrimary": "View on Steam",
       "ctaSecondary": "Browse reference",
-      "videoId": ""
+      "videoId": "",
+      "image": {
+        "src": "/images/editorial/cafe-welcome-v2.webp",
+        "srcset": "/images/editorial/cafe-welcome-v2-640.webp 640w, /images/editorial/cafe-welcome-v2.webp 1200w",
+        "alt": "Original illustrated maid cafe interior with a coffee counter, warm lighting and rose seating",
+        "caption": "Original AI-assisted cafe illustration · not a game screenshot"
+      }
     },
     "start": {
       "badge": "Start your shift",
@@ -183,28 +190,38 @@
           "title": "Run your cafe",
           "description": "Orders, receipts, restocking and your first shifts.",
           "icon": "lucide:coffee",
-          "href": "/guides/walkthrough/"
+          "href": "/guides/walkthrough/",
+          "image": "/images/editorial/cafe-service-v2.webp",
+          "imageAlt": "Illustrated coffee service counter",
+          "imageSrcset": "/images/editorial/cafe-service-v2-640.webp 640w, /images/editorial/cafe-service-v2.webp 1200w"
         },
         {
           "number": "02",
           "title": "Check achievements",
           "description": "23 entries, public objectives and hidden-condition limits.",
           "icon": "lucide:trophy",
-          "href": "/reference/achievements/"
+          "href": "/reference/achievements/",
+          "image": "/images/articles/achievement-groups-v2.svg",
+          "imageAlt": "Original achievement tracking graphic"
         },
         {
           "number": "03",
           "title": "Meet the maids",
           "description": "Five characters and what is known about their stories.",
           "icon": "lucide:heart",
-          "href": "/reference/maids-and-bonds/"
+          "href": "/reference/maids-and-bonds/",
+          "image": "/images/editorial/cafe-bonds-v2.webp",
+          "imageAlt": "Illustrated cafe conversation setting",
+          "imageSrcset": "/images/editorial/cafe-bonds-v2-640.webp 640w, /images/editorial/cafe-bonds-v2.webp 1200w"
         },
         {
           "number": "04",
           "title": "Unstick your story",
           "description": "Specific community checks, clearly labeled.",
           "icon": "lucide:circle-help",
-          "href": "/guides/troubleshooting/"
+          "href": "/guides/troubleshooting/",
+          "image": "/images/articles/bug-report-v2.svg",
+          "imageAlt": "Original issue-report checklist"
         }
       ]
     },

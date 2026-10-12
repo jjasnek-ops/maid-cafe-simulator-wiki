@@ -1,6 +1,6 @@
 ---
 /**
- * QuickStart — prominent icon-card grid of the 4 things a new player needs.
+ * QuickStart — visual guide cards, with optional locale-configured thumbnails.
  *
  * Renders `home.start.cards` as large, clickable tiles (2×2 on desktop,
  * single column on mobile). Each card carries an icon, title, one-line
@@ -22,6 +22,9 @@ interface StartCard {
   description: string;
   icon: string;
   href: string;
+  image?: string;
+  imageSrcset?: string;
+  imageAlt?: string;
 }
 
 interface Props {
@@ -43,8 +46,12 @@ const inlineAdEnabled = !!import.meta.env.PUBLIC_ADSTERRA_SLOT_INCONTENT_728X90;
       {cards.map((card: StartCard, index: number) => (<>
         <a
           href={localizePath(card.href, locale)}
-          class="card group flex flex-col p-5"
+          class:list={['card group flex gap-5 p-4', inlineAdEnabled ? 'flex-col sm:flex-row sm:items-center' : 'flex-col']}
         >
+          {card.image && (
+            <img src={card.image} srcset={card.imageSrcset} sizes={card.imageSrcset ? '(max-width: 639px) calc(100vw - 64px), 256px' : undefined} alt={card.imageAlt ?? ''} width="1200" height="675" loading="lazy" decoding="async" class:list={['aspect-video w-full shrink-0 rounded-lg object-cover', inlineAdEnabled && 'sm:w-64']} />
+          )}
+          <div class="min-w-0 flex-1">
           <div class="flex items-center justify-between">
             <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-nav/10 text-nav">
               <Icon name={card.icon} class="h-6 w-6" />
@@ -62,6 +69,7 @@ const inlineAdEnabled = !!import.meta.env.PUBLIC_ADSTERRA_SLOT_INCONTENT_728X90;
               class="h-3 w-3 transition group-hover:translate-x-0.5"
             />
           </span>
+          </div>
         </a>
         {inlineAdEnabled && index === 1 && <AdsterraSlot name="incontent-728x90" width={728} height={90} hideOnMobile />}
       </>))}

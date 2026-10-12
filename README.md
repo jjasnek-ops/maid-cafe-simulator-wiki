@@ -12,6 +12,8 @@ Seven launch articles cover cafe operations, the 23 listed Steam achievements, p
 
 The keyword records, page matrix, source snapshots and evidence ledger are in `research/`. They distinguish historical user metrics, observed suggestions, community reports and unknown measurements. This is the Steam game; Roblox content and redemption codes are excluded.
 
+The site has a visible cafe hero, illustrated guide cards and two body images per article. [Editorial media notes](docs/editorial-visuals.md) document the original AI-assisted artwork, information graphics and source constraints; illustrations are labeled and do not depict actual game screens or products.
+
 ## Local development
 
 Use Node.js **>=22.13.0** and **pnpm 11.1.1** (the pinned package manager). The launch was validated with Node 24.19.0.

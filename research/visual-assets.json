@@ -1,0 +1,40 @@
+{
+  "created": "2026-10-12",
+  "tool": "Built-in image_gen",
+  "kind": "AI-generated original editorial illustration",
+  "disclosure": "Conceptual artwork, not game screenshots, character portraits, recipes or DLC product previews.",
+  "assets": [
+    {
+      "slug": "cafe-welcome-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original editorial website hero illustration, landscape 16:9. Create a richly detailed inviting anime-inspired maid cafe interior at morning opening: dark wood coffee counter, cream walls, black framed arched windows, warm pendant lighting, velvet muted rose seating, neatly arranged small round tables, little potted plants, cups and an espresso machine. Polished painterly cel-shaded 3D-game aesthetic with warm natural light and subtle teal details. Wide eye-level view with visual depth, readable objects, not flat vector art. Environment only, no people. This is original thematic art for an independent game guide, not a game screenshot. No text, logos, interface, named characters, watermarks, or recognizable copyrighted game layout. Full opaque background.",
+      "files": [
+        "public/images/editorial/cafe-welcome-v2.webp",
+        "public/images/editorial/cafe-welcome-v2-640.webp"
+      ]
+    },
+    {
+      "slug": "cafe-service-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original editorial landscape 16:9 illustration for a cafe management beginner guide. Close-up wide view of a tidy maid cafe service counter, a white ceramic latte cup with a simple heart foam pattern, polished espresso machine, milk pitcher, small blank order pad, serving tray and ingredient jars; a welcoming cafe softly visible in the background. Anime-inspired painterly cel-shaded game aesthetic, beautiful warm daylight, dark walnut wood, cream, muted rose and a touch of teal. Strong differentiated object shapes and clear foreground focal point. No people. This is conceptual editorial art, not an actual game recipe or screenshot. No text, numbers, logos, game UI, watermark, or copied game assets. Full opaque background.",
+      "files": [
+        "public/images/editorial/cafe-service-v2.webp",
+        "public/images/editorial/cafe-service-v2-640.webp"
+      ]
+    },
+    {
+      "slug": "cafe-bonds-v2",
+      "prompt": "Use case: illustration-story. Asset type: original editorial landscape 16:9 illustration for a cafe staff relationship guide. A quiet cozy maid cafe table after service: two cups of tea, a small closed envelope and blank notebook on a walnut table, two empty comfortable chairs facing each other, soft evening light through a black framed window and warm hanging lights, a small flower vase. Anime-inspired polished cel-shaded painterly game illustration with muted rose, cream and teal accents. Focus on space for conversation and warmth, visual depth, tasteful details. No people or depicted game characters. Conceptual editorial artwork, not a screenshot of any game or a representation of any unlock condition. No writing, logos, hearts floating in the air, game UI, watermark, or copyrighted assets. Full opaque background.",
+      "files": [
+        "public/images/editorial/cafe-bonds-v2.webp",
+        "public/images/editorial/cafe-bonds-v2-640.webp"
+      ]
+    },
+    {
+      "slug": "cafe-wardrobe-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original editorial landscape 16:9 illustration for an optional costume DLC guide. A tasteful cafe staff wardrobe corner with a simple black-and-white modest full-length maid uniform and white apron on a wood hanger, folded fabric, a ribbon and polished shoes below, walnut wardrobe doors, muted rose wallpaper, soft teal upholstered bench. Anime-inspired polished cel-shaded game aesthetic, warm afternoon lighting, detailed cloth textures, clear elegant composition. Environment and clothing only, no people. Invent an original generic uniform; do not depict any named game's purchasable costume or branded character. Conceptual wardrobe illustration, not a product preview or screenshot. No text, labels, logos, game UI, watermark, or copyrighted assets. Full opaque background.",
+      "files": [
+        "public/images/editorial/cafe-wardrobe-v2.webp",
+        "public/images/editorial/cafe-wardrobe-v2-640.webp"
+      ]
+    }
+  ]
+}
