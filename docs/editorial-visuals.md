@@ -13,3 +13,5 @@ The active Steam guide uses four original AI-assisted cafe illustrations and nin
 - Body figures: `EditorialFigure.astro`, with explicit dimensions, descriptive ALT, captions, lazy loading and full-size image links. Raster figures and the hero have 640/1200px WebP variants. Recent-guide covers use Astro's existing image optimization.
 
 A visual refresh does not change an article's factual verification date. Add actual screenshots or character portraits only with evidence of permission and an accurate source caption. Never substitute an invented game interface, recipe, location, character likeness or purchasable costume.
+
+October 13 maintenance replaces the two active demo-transfer graphics and its cover with sibling `*-v3` assets. The developer confirmed a transfer problem, so the images now show current advice and a three-announcement timeline. This is a substantive fact correction; the four affected articles carry an October 13 modification date. The previous graphics remain historical assets and are no longer linked from the guide.

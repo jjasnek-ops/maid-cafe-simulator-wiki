@@ -1,30 +1,28 @@
 ---
-title: "Maid Cafe Simulator Demo Save Transfer: How to Continue"
-description: "Continue your demo progress in the full Steam game using the Demo slot, and distinguish the launch transfer from the older demo save reset."
+title: "Maid Cafe Simulator Demo Saves: Transfer Issue and Current Advice"
+description: "Demo save transfer is currently affected by a confirmed issue. Check the developer's October 13 advice and distinguish it from the older demo reset."
 category: "guides"
-image: '../../../../assets/covers/en-guides-demo-save-transfer-v2.webp'
+image: '../../../../assets/covers/en-guides-demo-save-transfer-v3.webp'
 date: 2026-10-10
-lastModified: 2026-10-10
-gameVersion: "Steam launch"
+lastModified: 2026-10-13
+gameVersion: "Steam release"
 tags: ["getting-started","progression","troubleshooting"]
 draft: false
-summary: "The developer confirms that demo saves carry into the full Steam game: open its save screen and select the slot labeled Demo. This launch transfer is separate from the September demo update that invalidated older demo saves. The official instructions do not require manual file copying or save editing."
+summary: "Demo saves currently do not transfer correctly into the full game. On October 13, the developer confirmed the problem, said a fix was in progress and advised starting a new game for now. The original Demo-slot transfer instruction is historical; it should not be treated as a working recovery method."
 ---
 
 import EditorialFigure from '~/components/mdx/EditorialFigure.astro';
 
-## How do you continue your demo save in the full game?
+## Do demo saves currently carry into the full game?
 
-Use the full game's save screen and select the slot marked **[Demo]**. This is the transfer instruction given in the developer's [full-game launch announcement](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067928563). No manual save-file path or copying step is specified there.
+**A confirmed transfer issue is currently affecting demo saves.** In the [October 13 developer notice](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067943316), Accelix says the promised transfer is not working correctly and a fix is being prepared. Its interim advice is to **start a new game** in the full release.
 
-1. Open the full Steam game, App 3232690.
-2. Go to the save screen.
-3. Select the slot labeled **[Demo]** to continue the demo progress.
+No fix release date or manual recovery method is published in that notice. It does not instruct players to delete existing saves.
 
-These steps follow the developer's statement. We have not claimed a firsthand transfer test on every operating system or older demo build.
+The [October 8 launch announcement](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067928563) promised transfer using a slot labeled **[Demo]**. That instruction is historical; selecting the slot does not establish that the current transfer works. No successful firsthand transfer test is claimed.
 
 
-<EditorialFigure src="/images/articles/demo-transfer-v2.svg" alt="Three-step diagram: open the full game, open its save screen and choose the Demo slot" caption="Original diagram of the developer’s transfer instruction, not a recreated game save screen." />
+<EditorialFigure src="/images/articles/demo-transfer-v3.svg" alt="Current demo-transfer status: issue confirmed, start a new game for now, and wait for the developer's fix notice" caption="Original summary of the October 13 advice. Starting a new game is not an instruction to delete existing saves." />
 
 ## What changes when you move from the demo to the full game?
 
@@ -46,16 +44,16 @@ Do not treat version 1.16.22 as the full game's release version. The same demo u
 Source: the September 29 entry in the [official Steam news feed](https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=3232690&count=50&maxlength=0&format=json), preserved in this project's source records.
 
 
-<EditorialFigure src="/images/articles/demo-timeline-v2.svg" alt="Timeline separating the September demo save-system reset from the full-game Demo slot transfer" caption="These are separate announcements; the diagram does not guarantee recovery of every older save." />
+<EditorialFigure src="/images/articles/demo-timeline-v3.svg" alt="Timeline showing the September demo reset, the October 8 transfer promise and the October 13 confirmed transfer issue" caption="Three separate announcements. The latest developer notice governs current transfer advice." />
 
-## What if the Demo slot is missing?
+## How do you report a transfer problem?
 
-The launch announcement does not provide a confirmed recovery method for a missing slot, an unsupported older demo build or a transfer between different computers. We therefore do not prescribe a guessed file path, a save-editor change or deletion of existing progress.
+The October 13 notice identifies **F8** or the **ESC menu** as in-game bug-reporting options. Include the demo build, full-game build and what happens when you try the save; those details are an editorial reporting checklist. The notice does not supply a missing-slot recovery procedure or a save-file editing method.
 
-Check that you are opening the full Steam game and record which demo build produced the save. If the slot remains absent, contact the [developer's support community](https://discord.gg/dv2xNkvrpD), identifying the versions and what the save screen shows.
+The [developer's support community](https://discord.gg/dv2xNkvrpD) is another place to follow official announcements. A follow-up announcing the fix would justify changing the current advice; no such fix is established by the sources checked for this update.
 
-For a task that stops advancing after you have already loaded the save, use the [story troubleshooting checks](/guides/troubleshooting/) instead. To learn the cafe operations after transfer, see the [beginner walkthrough](/guides/walkthrough/).
+For other stalled objectives, use the [story troubleshooting guide](/guides/troubleshooting/). Its community checks do not establish a fix for this transfer issue or the unresolved Chapter 10 report. For cafe operations, see the [beginner walkthrough](/guides/walkthrough/).
 
 ## Which release does this guide refer to?
 
-The developer announced the full release on October 8, 2026. The US Steam store date can appear as October 7; date presentation differs from the announcement. This page follows the launch announcement's transfer instruction and keeps historical demo changes explicitly labeled.
+The developer announced the full release on October 8, 2026. The US Steam store date can appear as October 7; date presentation differs from the announcement. This guide was revised on October 13 because the developer confirmed a material transfer issue; the older demo change and launch promise remain historical context.

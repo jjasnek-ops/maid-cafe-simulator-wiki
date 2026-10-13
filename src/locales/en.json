@@ -112,7 +112,7 @@
   "overview": {
     "guides": {
       "overviewTitle": "Maid Cafe Simulator Guides",
-      "overviewDescription": "Sourced Steam guides for cafe operations, progression, demo save transfer and specific launch troubleshooting."
+      "overviewDescription": "Sourced Steam guides for cafe operations, progression, the demo save transfer issue and specific launch troubleshooting."
     },
     "reference": {
       "overviewTitle": "Maid Cafe Simulator Reference",
@@ -125,7 +125,7 @@
       "description": "An independent Steam guide to Maid Cafe Simulator: achievements, cafe progression, maids, DLC and verified launch troubleshooting."
     },
     "updates": {
-      "title": "Steam launch guides"
+      "title": "Steam guides and updates"
     },
     "popular": {
       "badge": "Find your answer",
@@ -148,7 +148,7 @@
           "href": "/guides/troubleshooting/"
         },
         {
-          "label": "Demo Save Transfer: How to Continue",
+          "label": "Demo Saves: Confirmed Transfer Issue",
           "href": "/guides/demo-save-transfer/"
         },
         {
@@ -156,7 +156,7 @@
           "href": "/reference/maids-and-bonds/"
         },
         {
-          "label": "DLC: Outfits and Maidroids Explained",
+          "label": "DLC: Outfits, Bundles and Maidroids",
           "href": "/reference/dlc/"
         }
       ]
@@ -227,7 +227,7 @@
     },
     "explore": {
       "title": "Explore Maid Cafe Simulator",
-      "description": "Full-game launch information, with demo details kept separate.",
+      "description": "Verified Steam release information, with current notices and historical demo details kept separate.",
       "modules": [
         {
           "order": 1,
@@ -256,24 +256,24 @@
         {
           "order": 2,
           "name": "Maid Cafe Simulator Demo Saves",
-          "description": "Continue the demo from the full game’s save screen.",
+          "description": "Developer-confirmed transfer issue: a fix is in progress.",
           "href": "/guides/demo-save-transfer/",
           "displayType": "steps",
           "highlights": [
             {
               "label": "1",
-              "detail": "Open the full game’s save screen",
-              "badge": "Steam"
+              "detail": "Demo transfer is currently affected",
+              "badge": "October 13 notice"
             },
             {
               "label": "2",
-              "detail": "Select the slot labeled [Demo]",
-              "badge": "Developer instruction"
+              "detail": "Developer advises starting a new game",
+              "badge": "Temporary advice"
             },
             {
               "label": "3",
-              "detail": "Continue beyond the demo chapters",
-              "badge": "Full game"
+              "detail": "Await the official fix announcement",
+              "badge": "Fix in progress"
             }
           ]
         },
@@ -293,6 +293,11 @@
               "label": "Base game",
               "detail": "Developer says DLC is optional",
               "badge": "Confirmed"
+            },
+            {
+              "label": "October 13 plans",
+              "detail": "Three outfit bundles; two free outfits planned within October",
+              "badge": "Developer announcement"
             }
           ]
         },
@@ -327,7 +332,7 @@
         },
         {
           "question": "Can you transfer a demo save into the full game?",
-          "answer": "Yes. The full-game launch announcement says to select the slot labeled [Demo] on the save screen. An older September demo update separately invalidated saves from earlier demo builds."
+          "answer": "Demo transfer is currently affected by a confirmed issue. On October 13, the developer advised starting a new game while a fix is prepared. The launch Demo-slot instruction is historical; the older September demo reset is a separate event."
         },
         {
           "question": "What are the full-game level caps?",

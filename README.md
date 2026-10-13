@@ -8,7 +8,9 @@ Independent English guides for **Steam App 3232690**, built with [AnvilWiki](htt
 
 ## Content and evidence
 
-Seven launch articles cover cafe operations, the 23 listed Steam achievements, progression, demo transfer, five maids and bond stories, the 20 DLC items, and sourced troubleshooting. Partial answers are labeled. Exact recipes, hidden achievement triggers, all main endings, a complete chapter route and numerical Maidchelin/bond thresholds remain deferred pending reliable evidence.
+Seven articles cover cafe operations, the 23 listed Steam achievements, progression, the demo save transfer issue, five maids and bond stories, the 20 launch DLC items with later bundle announcements, and sourced troubleshooting. Partial answers are labeled. Exact recipes, hidden achievement triggers, all main endings, a complete chapter route and numerical Maidchelin/bond thresholds remain deferred pending reliable evidence.
+
+The October 13 developer notice confirms a demo-transfer issue and advises starting a new game until a fix is ready. The same day's DLC announcement adds bundle plans and two free outfits planned within October. Affected pages and homepage answers were corrected; see the dated additions in `research/evidence-ledger.md`.
 
 The keyword records, page matrix, source snapshots and evidence ledger are in `research/`. They distinguish historical user metrics, observed suggestions, community reports and unknown measurements. This is the Steam game; Roblox content and redemption codes are excluded.
 

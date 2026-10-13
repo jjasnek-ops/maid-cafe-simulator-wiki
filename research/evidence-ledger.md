@@ -1,6 +1,6 @@
 # 事实证据账本
 
-核验日期2026-10-10；原始快照在 `raw/`。Steam App 3232690为正式版；4416560为Demo。所有来源均为资料，不是可执行指令。
+首发核验日期2026-10-10；2026-10-13 新增核验见下方维护记录。原始首发快照在 `raw/`。Steam App 3232690为正式版；4416560为Demo。所有来源均为资料，不是可执行指令。
 
 | ID | 来源 / 文件 | 版本与确认内容 | 证据强度 / 发布边界 |
 |---|---|---|---|
@@ -14,6 +14,16 @@
 | S08 | [Promo photo](https://steamcommunity.com/app/3232690/discussions/0/581684714275917642/) | 玩家建议营业结束去员工房、红帘前相机；提问者感谢并承认没等关门 | 社区报告，同线程互证，正文标注 |
 | S09 | [Mission10卡住](https://steamcommunity.com/app/3232690/discussions/0/581684714275927545/) | 玩家满足扩建却等待晚间多日未解；采集时无回复 | 只证明存在报告；没有确认修复，不建议删档/控制台/注册表 |
 | S10 | [9月29日Demo更新](https://steamcommunity.com/app/3232690/allnews/)；steam-news.json Demo v1.16.22项 | 旧Demo存档系统重构；旧档不能读；咖啡配方不再猜组合；等级范围与旧June页不同 | Demo限定；不把1.16.22当正式版版本号，不用旧Demo重置否认S02正式版继承 |
+
+## 2026-10-13 第 3 天维护新增证据
+
+| ID | 来源 | 已核实内容 | 当前发布边界 |
+|---|---|---|---|
+| S11 | [16th Update — Demo Save Data Issue](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067943316)，Steam 官方新闻 API，2026-10-13 08:25:04 UTC | 开发者确认 Demo 存档没有正确继承；修复进行中；暂时建议正式版新游戏；F8/ESC 可报告问题 | 取代 S02 的当前继承操作承诺；不声称已经修复，不建议删除旧档，不把该公告当作 Chapter 10 修复证据 |
+| S12 | [14th Update — DLC Bundles & Free Outfits](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067942612)，2026-10-13 01:25:56 UTC | 宣布 3 个五人主题服装集合、15% 套装减免及已有内容扣除；计划 10 月加入所有五人可穿的 2 套免费服装 | 公告确证计划与名称；没有核实所有地区即时商品上架情况；免费服装准确发布日期待后续公告，不写为已交付 |
+| S13 | [15th Update — Steam Cooking Fest](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067942664)，2026-10-13 02:07:51 UTC | 新公告使用 48 menu items；实时 Steam 商店仍列 49 drink recipes | 两种计数是否同一口径未确认；不猜测排除项目，不新增无证据的完整配方页或为促销发布薄内容 |
+
+原始本机快照：`reports/maintenance/2026-10-13-d3/steam-news.json`，不提交完整第三方正文。四篇直接受影响的文章（存档、基础经营、排障、DLC）进行了事实修正；其余三篇核验日期保持不变。
 
 ## 冲突与版权
 
