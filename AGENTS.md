@@ -75,6 +75,8 @@ This fork additionally uses four owner-provided Adsterra units. See `docs/adster
 
 Active editorial media is documented in `docs/editorial-visuals.md`: original illustrations are labeled, every article has two body images, and visual-only edits preserve factual verification dates. Game screenshots require confirmed permission.
 
+GA4 is enabled with the owner's web stream through `PUBLIC_GA_ID`. See `docs/ga4.md`: basic consent mode blocks Google requests until acceptance, production-hostname filtering excludes previews, and Google advertising consent remains denied. Do not add a second page_view event or publish account credentials.
+
 广告系统基于 Google AdSense,3 个广告位(Sticky / Sidebar / InContent)各一个 `<AdSenseSlot position="...">` 组件。`AdSenseSlot` 根据 `position` 读对应的 `PUBLIC_ADSENSE_SLOT_*` 环境变量,渲染 `<ins class="adsbygoogle">` 标签。`PUBLIC_ADSENSE_CLIENT` 或对应 slot ID 为空时组件 `return null` 不渲染(保 Lighthouse 4×100 开箱契约)。AdSense loader 由 `BaseLayout.astro` 在 `<head>` 注入,仅当 `PUBLIC_ADSENSE_CLIENT` 有值时加载。详见 PRD §10。
 
 Adsterra(v2.26.0 起)是并存的第二广告网络:`AdsterraSlot`(每单元一个 `public/ads/<name>.html` + sandbox iframe,env `PUBLIC_ADSTERRA_SLOT_<NAME>` 门控,空=不渲染,与 GA/AdSense 同一同意门控)+ `MobileAnchorAd`(v2.28.0,文章页 320×50 底部锚位,env `PUBLIC_ADSTERRA_SLOT_STICKY_320X50`)。预挂位总清单与接入教程见 `docs/ads.md`,架构见 PRD §10.7,env 全表见 PRD 附录 A.2。

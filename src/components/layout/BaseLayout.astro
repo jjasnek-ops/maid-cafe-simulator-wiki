@@ -125,6 +125,7 @@ const xDefaultHref = defaultAlt
 
 // Optional analytics / verification / ads (env-var gated — empty = not injected).
 const gaId = import.meta.env.PUBLIC_GA_ID as string | undefined;
+const gaHostname = new URL(siteUrl).hostname;
 const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN as string | undefined;
 const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION as string | undefined;
 const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined;
@@ -246,21 +247,37 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
       → this block renders nothing → zero JS.
     */}
     {(gaId || adsenseClient) && (
-      <script is:inline define:vars={{ gaId, adsenseClient }}>
+      <script is:inline define:vars={{ gaId, adsenseClient, gaHostname }}>
+        // Keep local and deployment previews out of the production property.
+        const gaEnabledHere = gaId && window.location.hostname === gaHostname;
+        if (gaEnabledHere) {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function () {
+            window.dataLayer.push(arguments);
+          };
+          // Basic consent mode: no Google request before acceptance.
+          window.gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+          });
+        }
         window.__awLoadTrackers = () => {
           if (window.__awTrackersLoaded) return;
           window.__awTrackersLoaded = true;
-          if (gaId) {
+          if (gaEnabledHere) {
+            window.gtag('consent', 'update', { analytics_storage: 'granted' });
+            window.gtag('js', new Date());
+            // config sends one initial page_view; no duplicate manual event.
+            window.gtag('config', gaId, {
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false,
+            });
             const s = document.createElement('script');
             s.async = true;
             s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
             document.head.appendChild(s);
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', gaId);
           }
           if (adsenseClient) {
             const s = document.createElement('script');

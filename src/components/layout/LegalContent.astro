@@ -1,11 +1,15 @@
 ---
 /** Generic disclosures; game identity remains in site config. */
 import { site } from '~/config/site';
-import { hasAdsterra } from '~/lib/adsterra-config';
+import { hasAdsterra, needsTrackingConsent } from '~/lib/adsterra-config';
+import { getUi } from '~/i18n/ui';
+import ConsentSettingsButton from '~/components/layout/ConsentSettingsButton.astro';
 interface Props { page: 'about' | 'privacy-policy' | 'terms-of-service' | 'copyright' | 'contact'; }
 const { page } = Astro.props;
 const year = new Date().getFullYear();
 const analyticsEnabled = !!(import.meta.env.PUBLIC_GA_ID || import.meta.env.PUBLIC_CF_BEACON_TOKEN);
+const gaEnabled = !!import.meta.env.PUBLIC_GA_ID;
+const privacyStrings = getUi(Astro.currentLocale ?? 'en').shared;
 const adsEnabled = !!import.meta.env.PUBLIC_ADSENSE_CLIENT || Object.entries(import.meta.env).some(
   ([key, value]) => key.startsWith('PUBLIC_ADSTERRA_SLOT_') && !!value,
 );
@@ -28,6 +32,8 @@ const adsEnabled = !!import.meta.env.PUBLIC_ADSENSE_CLIENT || Object.entries(imp
   <p>Cloudflare serves this site and may process request information for delivery, security and performance under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
   <h2>Analytics and advertising</h2>
   {analyticsEnabled ? <p>Analytics is enabled. Cookie-based analytics loads after consent; a configured Cloudflare beacon uses its own data practices.</p> : <p>Google Analytics and the optional Cloudflare Web Analytics beacon are disabled in the current configuration.</p>}
+  {gaEnabled && <p>{privacyStrings.ga4PrivacyText} <a href="https://policies.google.com/privacy">{privacyStrings.ga4PrivacyLinkLabel}</a>.</p>}
+  {needsTrackingConsent && <ConsentSettingsButton />}
   {adsEnabled ? <p>Advertising is enabled. Configured advertising scripts load after consent. You can decline advertising cookies in the consent prompt; the guide remains available.</p> : <p>Advertising scripts and ad slots are disabled in the current configuration.</p>}
   {hasAdsterra && <p>Adsterra supplies the banner and native ads. Its services may process IP addresses, browser and device information, cookie identifiers and ad interactions to deliver and measure advertising. See <a href="https://adsterra.com/privacy-policy/">Adsterra's privacy policy</a>. Ads are labeled as advertisements and are separate from the guide; their appearance does not imply our endorsement.</p>}
   <h2>External services</h2>

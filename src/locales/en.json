@@ -39,6 +39,9 @@
     "accept": "Accept",
     "decline": "Decline",
     "consentTitle": "Cookies",
+    "ga4PrivacyText": "After you accept analytics cookies, Google Analytics 4 measures page views, visits and interactions using cookie identifiers and browser or device information. Declining keeps the guide available. See",
+    "ga4PrivacyLinkLabel": "Google's privacy policy",
+    "changeCookieChoices": "Change cookie choices",
     "bossCard": {
       "title": "Boss Overview",
       "hp": "HP",

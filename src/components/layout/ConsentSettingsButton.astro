@@ -1,0 +1,17 @@
+---
+import { getUi } from '~/i18n/ui';
+const label = getUi(Astro.currentLocale ?? 'en').shared.changeCookieChoices;
+---
+<button type="button" class="btn-outline" data-reset-consent>{label}</button>
+<script>
+  import { CONSENT_STORAGE_KEY } from '~/lib/shared-ui';
+  const button = document.querySelector('[data-reset-consent]');
+  if (button) button.addEventListener('click', () => {
+    try {
+      localStorage.removeItem(CONSENT_STORAGE_KEY);
+    } catch {
+      // Reload still returns to the undecided state when storage is unavailable.
+    }
+    window.location.reload();
+  });
+</script>
